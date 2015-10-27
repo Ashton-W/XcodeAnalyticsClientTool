@@ -25,7 +25,631 @@
 /* Begin PBXFileReference section */
 		46717BE11BDF384200320A22 /* AnalyticsClientTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AnalyticsClientTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		46717BE41BDF384200320A22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		46717BEB1BDF39B900320A22 /* DVTAnalyticsClientTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsClientTool.h; sourceTree = "<group>"; };
+		46717C1A1BDF705B00320A22 /* _DVTCrashPointAppStoreListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTCrashPointAppStoreListResult.h; sourceTree = "<group>"; };
+		46717C1B1BDF705B00320A22 /* DVTAnalyticsSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsSnapshot.h; sourceTree = "<group>"; };
+		46717C1C1BDF705B00320A22 /* DVTAnalyticsSnapshotFileSystemSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsSnapshotFileSystemSerialization.h; sourceTree = "<group>"; };
+		46717C1D1BDF705B00320A22 /* DVTCrashLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashLog.h; sourceTree = "<group>"; };
+		46717C1E1BDF705B00320A22 /* DVTCrashLogBacktrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashLogBacktrace.h; sourceTree = "<group>"; };
+		46717C1F1BDF705B00320A22 /* DVTCrashLogBinaryImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashLogBinaryImage.h; sourceTree = "<group>"; };
+		46717C201BDF705B00320A22 /* DVTCrashLogBinaryImageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashLogBinaryImageParser.h; sourceTree = "<group>"; };
+		46717C211BDF705B00320A22 /* DVTCrashLogParsedBinaryImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashLogParsedBinaryImage.h; sourceTree = "<group>"; };
+		46717C221BDF705B00320A22 /* DVTCrashLogParsedStackFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashLogParsedStackFrame.h; sourceTree = "<group>"; };
+		46717C231BDF705B00320A22 /* DVTCrashLogProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashLogProvider.h; sourceTree = "<group>"; };
+		46717C241BDF705B00320A22 /* DVTCrashLogRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashLogRecord.h; sourceTree = "<group>"; };
+		46717C251BDF705B00320A22 /* DVTCrashLogSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashLogSection.h; sourceTree = "<group>"; };
+		46717C261BDF705B00320A22 /* DVTCrashLogStackFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashLogStackFrame.h; sourceTree = "<group>"; };
+		46717C271BDF705B00320A22 /* DVTCrashLogStackFrameParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashLogStackFrameParser.h; sourceTree = "<group>"; };
+		46717C281BDF705B00320A22 /* DVTCrashLogThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashLogThread.h; sourceTree = "<group>"; };
+		46717C291BDF705B00320A22 /* DVTCrashPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashPoint.h; sourceTree = "<group>"; };
+		46717C2A1BDF705B00320A22 /* DVTCrashPointAppStoreSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashPointAppStoreSource.h; sourceTree = "<group>"; };
+		46717C2B1BDF705B00320A22 /* DVTCrashPointDistributionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashPointDistributionInfo.h; sourceTree = "<group>"; };
+		46717C2C1BDF705B00320A22 /* DVTCrashPointFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashPointFilter.h; sourceTree = "<group>"; };
+		46717C2D1BDF705B00320A22 /* DVTCrashPointLocalSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashPointLocalSource.h; sourceTree = "<group>"; };
+		46717C2E1BDF705B00320A22 /* DVTCrashPointParameterizedAppStoreSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashPointParameterizedAppStoreSource.h; sourceTree = "<group>"; };
+		46717C2F1BDF705B00320A22 /* DVTCrashPointParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashPointParameters.h; sourceTree = "<group>"; };
+		46717C301BDF705B00320A22 /* DVTCrashPointRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashPointRecord.h; sourceTree = "<group>"; };
+		46717C311BDF705B00320A22 /* DVTCrashPointRecordObserved.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashPointRecordObserved.h; sourceTree = "<group>"; };
+		46717C321BDF705B00320A22 /* DVTCrashPointSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashPointSource.h; sourceTree = "<group>"; };
+		46717C331BDF705B00320A22 /* DVTCrashPointUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCrashPointUserData.h; sourceTree = "<group>"; };
+		46717C341BDF705B00320A22 /* DVTDeviceSymbolicatedStackFrameParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeviceSymbolicatedStackFrameParser.h; sourceTree = "<group>"; };
+		46717C351BDF705B00320A22 /* DVTInvalidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTInvalidation.h; sourceTree = "<group>"; };
+		46717C361BDF705B00320A22 /* DVTiOSBinaryImageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTiOSBinaryImageParser.h; sourceTree = "<group>"; };
+		46717C371BDF705B00320A22 /* DVTMultiLineCrashLogSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMultiLineCrashLogSection.h; sourceTree = "<group>"; };
+		46717C381BDF705B00320A22 /* DVTOSXBinaryImageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTOSXBinaryImageParser.h; sourceTree = "<group>"; };
+		46717C391BDF705B00320A22 /* DVTServerSymbolicatedStackFrameParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTServerSymbolicatedStackFrameParser.h; sourceTree = "<group>"; };
+		46717C3A1BDF705B00320A22 /* DVTServicesFilenameSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTServicesFilenameSerialization.h; sourceTree = "<group>"; };
+		46717C3B1BDF705B00320A22 /* DVTServicesFileSystemSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTServicesFileSystemSerialization.h; sourceTree = "<group>"; };
+		46717C3C1BDF705B00320A22 /* DVTServicesJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTServicesJSONSerialization.h; sourceTree = "<group>"; };
+		46717C3D1BDF705B00320A22 /* DVTUnsymbolicatedStackFrameParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTUnsymbolicatedStackFrameParser.h; sourceTree = "<group>"; };
+		46717C3E1BDF705B00320A22 /* NSCopying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCopying.h; sourceTree = "<group>"; };
+		46717C3F1BDF705B00320A22 /* NSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObject.h; sourceTree = "<group>"; };
+		46717C411BDF705B00320A22 /* DVTAnalyticsAppIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsAppIdentifier.h; sourceTree = "<group>"; };
+		46717C421BDF705B00320A22 /* DVTAnalyticsClientTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsClientTool.h; sourceTree = "<group>"; };
+		46717C431BDF705B00320A22 /* DVTAnalyticsCrashPointData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointData.h; sourceTree = "<group>"; };
+		46717C441BDF705B00320A22 /* DVTAnalyticsCrashPointDateDistributionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointDateDistributionOption.h; sourceTree = "<group>"; };
+		46717C451BDF705B00320A22 /* DVTAnalyticsCrashPointDeviceFamilyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointDeviceFamilyData.h; sourceTree = "<group>"; };
+		46717C461BDF705B00320A22 /* DVTAnalyticsCrashPointDeviceFamilyDistribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointDeviceFamilyDistribution.h; sourceTree = "<group>"; };
+		46717C471BDF705B00320A22 /* DVTAnalyticsCrashPointDeviceFamilyDistributionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointDeviceFamilyDistributionOption.h; sourceTree = "<group>"; };
+		46717C481BDF705B00320A22 /* DVTAnalyticsCrashPointDeviceFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointDeviceFilter.h; sourceTree = "<group>"; };
+		46717C491BDF705B00320A22 /* DVTAnalyticsCrashPointDistributionOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointDistributionOptions.h; sourceTree = "<group>"; };
+		46717C4A1BDF705B00320A22 /* DVTAnalyticsCrashPointDownloadData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointDownloadData.h; sourceTree = "<group>"; };
+		46717C4B1BDF705B00320A22 /* DVTAnalyticsCrashPointIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointIdentifier.h; sourceTree = "<group>"; };
+		46717C4C1BDF705B00320A22 /* DVTAnalyticsCrashPointList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointList.h; sourceTree = "<group>"; };
+		46717C4D1BDF705B00320A22 /* DVTAnalyticsCrashPointLogData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointLogData.h; sourceTree = "<group>"; };
+		46717C4E1BDF705B00320A22 /* DVTAnalyticsCrashPointLogList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointLogList.h; sourceTree = "<group>"; };
+		46717C4F1BDF705B00320A22 /* DVTAnalyticsCrashPointMoreLogsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointMoreLogsData.h; sourceTree = "<group>"; };
+		46717C501BDF705B00320A22 /* DVTAnalyticsCrashPointOSDistributionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointOSDistributionOption.h; sourceTree = "<group>"; };
+		46717C511BDF705B00320A22 /* DVTAnalyticsCrashPointOSFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointOSFilter.h; sourceTree = "<group>"; };
+		46717C521BDF705B00320A22 /* DVTAnalyticsCrashPointOSVersionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointOSVersionData.h; sourceTree = "<group>"; };
+		46717C531BDF705B00320A22 /* DVTAnalyticsCrashPointOSVersionDistribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointOSVersionDistribution.h; sourceTree = "<group>"; };
+		46717C541BDF705B00320A22 /* DVTAnalyticsCrashPointSortingOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointSortingOption.h; sourceTree = "<group>"; };
+		46717C551BDF705B00320A22 /* DVTAnalyticsCrashPointSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointSummary.h; sourceTree = "<group>"; };
+		46717C561BDF705B00320A22 /* DVTAnalyticsCrashPointTimeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointTimeData.h; sourceTree = "<group>"; };
+		46717C571BDF705B00320A22 /* DVTAnalyticsCrashPointTimeDistribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsCrashPointTimeDistribution.h; sourceTree = "<group>"; };
+		46717C581BDF705B00320A22 /* DVTAnalyticsDownloadCrashPointService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsDownloadCrashPointService.h; sourceTree = "<group>"; };
+		46717C591BDF705B00320A22 /* DVTAnalyticsDownloadMoreLogsOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsDownloadMoreLogsOptions.h; sourceTree = "<group>"; };
+		46717C5A1BDF705B00320A22 /* DVTAnalyticsDownloadMoreLogsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsDownloadMoreLogsService.h; sourceTree = "<group>"; };
+		46717C5B1BDF705B00320A22 /* DVTAnalyticsLastCrashPointTimeOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsLastCrashPointTimeOption.h; sourceTree = "<group>"; };
+		46717C5C1BDF705B00320A22 /* DVTAnalyticsLastCrashReportKeyOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsLastCrashReportKeyOption.h; sourceTree = "<group>"; };
+		46717C5D1BDF705B00320A22 /* DVTAnalyticsListTopCrashPointsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsListTopCrashPointsService.h; sourceTree = "<group>"; };
+		46717C5E1BDF705B00320A22 /* DVTAnalyticsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsRequest.h; sourceTree = "<group>"; };
+		46717C5F1BDF705B00320A22 /* DVTAnalyticsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsResponse.h; sourceTree = "<group>"; };
+		46717C601BDF705B00320A22 /* DVTAnalyticsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsService.h; sourceTree = "<group>"; };
+		46717C611BDF705B00320A22 /* DVTAnalyticsServiceOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsServiceOption.h; sourceTree = "<group>"; };
+		46717C621BDF705B00320A22 /* DVTAnalyticsServiceURLComponentProviding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAnalyticsServiceURLComponentProviding.h; sourceTree = "<group>"; };
+		46717C631BDF705B00320A22 /* DVTServicesJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTServicesJSONSerialization.h; sourceTree = "<group>"; };
+		46717C641BDF705B00320A22 /* NSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObject.h; sourceTree = "<group>"; };
+		46717C651BDF705B00320A22 /* NSURLSessionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLSessionDelegate.h; sourceTree = "<group>"; };
+		46717C671BDF705B00320A22 /* _DVTAsynchronousRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTAsynchronousRequest.h; sourceTree = "<group>"; };
+		46717C681BDF705B00320A22 /* _DVTCancellationBlockToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTCancellationBlockToken.h; sourceTree = "<group>"; };
+		46717C691BDF705B00320A22 /* _DVTDeallocationMonitorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTDeallocationMonitorInfo.h; sourceTree = "<group>"; };
+		46717C6A1BDF705B00320A22 /* _DVTDeviceLocatorTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTDeviceLocatorTracker.h; sourceTree = "<group>"; };
+		46717C6B1BDF705B00320A22 /* _DVTDiffHashingDictionaryDiffHashContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTDiffHashingDictionaryDiffHashContext.h; sourceTree = "<group>"; };
+		46717C6C1BDF705B00320A22 /* _DVTDiffLineDataSourceConsistentCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTDiffLineDataSourceConsistentCopy.h; sourceTree = "<group>"; };
+		46717C6D1BDF705B00320A22 /* _DVTDisallowFinishToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTDisallowFinishToken.h; sourceTree = "<group>"; };
+		46717C6E1BDF705B00320A22 /* _DVTErrorRecoveryHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTErrorRecoveryHandler.h; sourceTree = "<group>"; };
+		46717C6F1BDF705B00320A22 /* _DVTFilePathAssoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTFilePathAssoc.h; sourceTree = "<group>"; };
+		46717C701BDF705B00320A22 /* _DVTFoundationPrivateClassForFindingBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTFoundationPrivateClassForFindingBundle.h; sourceTree = "<group>"; };
+		46717C711BDF705B00320A22 /* _DVTLogObjectsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTLogObjectsRequest.h; sourceTree = "<group>"; };
+		46717C721BDF705B00320A22 /* _DVTNotificationReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTNotificationReceiver.h; sourceTree = "<group>"; };
+		46717C731BDF705B00320A22 /* _DVTWeakInterposerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTWeakInterposerHelper.h; sourceTree = "<group>"; };
+		46717C741BDF705B00320A22 /* _DVTXMLParsingState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DVTXMLParsingState.h; sourceTree = "<group>"; };
+		46717C751BDF705B00320A22 /* DataGatheringNSURLConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataGatheringNSURLConnectionDelegate.h; sourceTree = "<group>"; };
+		46717C761BDF705B00320A22 /* DataWritingNSURLConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataWritingNSURLConnectionDelegate.h; sourceTree = "<group>"; };
+		46717C771BDF705B00320A22 /* DTDKAddAppIDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKAddAppIDService.h; sourceTree = "<group>"; };
+		46717C781BDF705B00320A22 /* DTDKAddApplicationGroupsToAppIDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKAddApplicationGroupsToAppIDService.h; sourceTree = "<group>"; };
+		46717C791BDF705B00320A22 /* DTDKAddApplicationGroupToTeamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKAddApplicationGroupToTeamService.h; sourceTree = "<group>"; };
+		46717C7A1BDF705B00320A22 /* DTDKAddCloudContainersToAppIDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKAddCloudContainersToAppIDService.h; sourceTree = "<group>"; };
+		46717C7B1BDF705B00320A22 /* DTDKAddCloudContainerToTeamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKAddCloudContainerToTeamService.h; sourceTree = "<group>"; };
+		46717C7C1BDF705B00320A22 /* DTDKAddDeviceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKAddDeviceService.h; sourceTree = "<group>"; };
+		46717C7D1BDF705B00320A22 /* DTDKAddOMCIdentifiersToAppIDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKAddOMCIdentifiersToAppIDService.h; sourceTree = "<group>"; };
+		46717C7E1BDF705B00320A22 /* DTDKAddOMCIdentifierToTeamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKAddOMCIdentifierToTeamService.h; sourceTree = "<group>"; };
+		46717C7F1BDF705B00320A22 /* DTDKAddShoeboxIDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKAddShoeboxIDService.h; sourceTree = "<group>"; };
+		46717C801BDF705B00320A22 /* DTDKCertificateAuthorityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKCertificateAuthorityService.h; sourceTree = "<group>"; };
+		46717C811BDF705B00320A22 /* DTDKCertificateService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKCertificateService.h; sourceTree = "<group>"; };
+		46717C821BDF705B00320A22 /* DTDKCreateProvisioningProfileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKCreateProvisioningProfileService.h; sourceTree = "<group>"; };
+		46717C831BDF705B00320A22 /* DTDKDeleteAppIDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKDeleteAppIDService.h; sourceTree = "<group>"; };
+		46717C841BDF705B00320A22 /* DTDKDeleteProvisioningProfileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKDeleteProvisioningProfileService.h; sourceTree = "<group>"; };
+		46717C851BDF705B00320A22 /* DTDKDeleteShoeboxIDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKDeleteShoeboxIDService.h; sourceTree = "<group>"; };
+		46717C861BDF705B00320A22 /* DTDKDeveloperInfoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKDeveloperInfoService.h; sourceTree = "<group>"; };
+		46717C871BDF705B00320A22 /* DTDKDeveloperPortalService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKDeveloperPortalService.h; sourceTree = "<group>"; };
+		46717C881BDF705B00320A22 /* DTDKDownloadCertService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKDownloadCertService.h; sourceTree = "<group>"; };
+		46717C891BDF705B00320A22 /* DTDKDownloadProvisioningProfileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKDownloadProvisioningProfileService.h; sourceTree = "<group>"; };
+		46717C8A1BDF705B00320A22 /* DTDKFetchAppIDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKFetchAppIDService.h; sourceTree = "<group>"; };
+		46717C8B1BDF705B00320A22 /* DTDKListAppIDsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKListAppIDsService.h; sourceTree = "<group>"; };
+		46717C8C1BDF705B00320A22 /* DTDKListApplicationGroupsForTeamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKListApplicationGroupsForTeamService.h; sourceTree = "<group>"; };
+		46717C8D1BDF705B00320A22 /* DTDKListCertService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKListCertService.h; sourceTree = "<group>"; };
+		46717C8E1BDF705B00320A22 /* DTDKListCloudContainersForAppIDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKListCloudContainersForAppIDService.h; sourceTree = "<group>"; };
+		46717C8F1BDF705B00320A22 /* DTDKListCloudContainersForTeamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKListCloudContainersForTeamService.h; sourceTree = "<group>"; };
+		46717C901BDF705B00320A22 /* DTDKListCSRsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKListCSRsService.h; sourceTree = "<group>"; };
+		46717C911BDF705B00320A22 /* DTDKListDeviceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKListDeviceService.h; sourceTree = "<group>"; };
+		46717C921BDF705B00320A22 /* DTDKListEverythingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKListEverythingService.h; sourceTree = "<group>"; };
+		46717C931BDF705B00320A22 /* DTDKListOMCIdentifiersForTeamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKListOMCIdentifiersForTeamService.h; sourceTree = "<group>"; };
+		46717C941BDF705B00320A22 /* DTDKListProvisioningProfileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKListProvisioningProfileService.h; sourceTree = "<group>"; };
+		46717C951BDF705B00320A22 /* DTDKListShoeboxIDsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKListShoeboxIDsService.h; sourceTree = "<group>"; };
+		46717C961BDF705B00320A22 /* DTDKListTeamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKListTeamService.h; sourceTree = "<group>"; };
+		46717C971BDF705B00320A22 /* DTDKRemoveDeviceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKRemoveDeviceService.h; sourceTree = "<group>"; };
+		46717C981BDF705B00320A22 /* DTDKRenameDeviceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKRenameDeviceService.h; sourceTree = "<group>"; };
+		46717C991BDF705B00320A22 /* DTDKRevokeCertService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKRevokeCertService.h; sourceTree = "<group>"; };
+		46717C9A1BDF705B00320A22 /* DTDKServerCancelJoinTeamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKServerCancelJoinTeamService.h; sourceTree = "<group>"; };
+		46717C9B1BDF705B00320A22 /* DTDKServerDownloadTeamClientCertificateService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKServerDownloadTeamClientCertificateService.h; sourceTree = "<group>"; };
+		46717C9C1BDF705B00320A22 /* DTDKServerDownloadTeamDevelopmentCertificateService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKServerDownloadTeamDevelopmentCertificateService.h; sourceTree = "<group>"; };
+		46717C9D1BDF705B00320A22 /* DTDKServerJoinTeamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKServerJoinTeamService.h; sourceTree = "<group>"; };
+		46717C9E1BDF705B00320A22 /* DTDKServerRenewTeamMembershipTeamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKServerRenewTeamMembershipTeamService.h; sourceTree = "<group>"; };
+		46717C9F1BDF705B00320A22 /* DTDKServerRequestTeamDevelopmentCertificateService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKServerRequestTeamDevelopmentCertificateService.h; sourceTree = "<group>"; };
+		46717CA01BDF705B00320A22 /* DTDKServerRevokeTeamMembershipTeamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKServerRevokeTeamMembershipTeamService.h; sourceTree = "<group>"; };
+		46717CA11BDF705B00320A22 /* DTDKSubmitCSRService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKSubmitCSRService.h; sourceTree = "<group>"; };
+		46717CA21BDF705B00320A22 /* DTDKTeamBasedService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKTeamBasedService.h; sourceTree = "<group>"; };
+		46717CA31BDF705B00320A22 /* DTDKUpdateAppIDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDKUpdateAppIDService.h; sourceTree = "<group>"; };
+		46717CA41BDF705B00320A22 /* DTXAllowedRPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXAllowedRPC.h; sourceTree = "<group>"; };
+		46717CA51BDF705B00320A22 /* DVTAbstractMacDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAbstractMacDevice.h; sourceTree = "<group>"; };
+		46717CA61BDF705B00320A22 /* DVTActivationRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTActivationRule.h; sourceTree = "<group>"; };
+		46717CA71BDF705B00320A22 /* DVTAddAppIDOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAddAppIDOperation.h; sourceTree = "<group>"; };
+		46717CA81BDF705B00320A22 /* DVTAddApplicationGroupsToAppIDOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAddApplicationGroupsToAppIDOperation.h; sourceTree = "<group>"; };
+		46717CA91BDF705B00320A22 /* DVTAddApplicationGroupToTeamOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAddApplicationGroupToTeamOperation.h; sourceTree = "<group>"; };
+		46717CAA1BDF705B00320A22 /* DVTAddCloudContainersToAppIDOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAddCloudContainersToAppIDOperation.h; sourceTree = "<group>"; };
+		46717CAB1BDF705B00320A22 /* DVTAddCloudContainerToTeamOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAddCloudContainerToTeamOperation.h; sourceTree = "<group>"; };
+		46717CAC1BDF705B00320A22 /* DVTAddDeviceOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAddDeviceOperation.h; sourceTree = "<group>"; };
+		46717CAD1BDF705B00320A22 /* DVTAddOMCIdentifiersToAppIDOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAddOMCIdentifiersToAppIDOperation.h; sourceTree = "<group>"; };
+		46717CAE1BDF705B00320A22 /* DVTAddOMCIdentifierToTeamOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAddOMCIdentifierToTeamOperation.h; sourceTree = "<group>"; };
+		46717CAF1BDF705B00320A22 /* DVTAppExtensionInstallPromiseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAppExtensionInstallPromiseManager.h; sourceTree = "<group>"; };
+		46717CB01BDF705B00320A22 /* DVTAppIDFeatures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAppIDFeatures.h; sourceTree = "<group>"; };
+		46717CB11BDF705B00320A22 /* DVTAppIDRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAppIDRecord.h; sourceTree = "<group>"; };
+		46717CB21BDF705B00320A22 /* DVTAppleIDBasedDeveloperAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAppleIDBasedDeveloperAccount.h; sourceTree = "<group>"; };
+		46717CB31BDF705B00320A22 /* DVTApplicationGroupRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTApplicationGroupRecord.h; sourceTree = "<group>"; };
+		46717CB41BDF705B00320A22 /* DVTArchitecture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTArchitecture.h; sourceTree = "<group>"; };
+		46717CB51BDF705B00320A22 /* DVTArrayObservingBlockToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTArrayObservingBlockToken.h; sourceTree = "<group>"; };
+		46717CB61BDF705B00320A22 /* DVTAssertingWeakInterposer_ProxyHelperReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAssertingWeakInterposer_ProxyHelperReference.h; sourceTree = "<group>"; };
+		46717CB71BDF705B00320A22 /* DVTAssertingWeakInterposer_RuntimeWeakReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAssertingWeakInterposer_RuntimeWeakReference.h; sourceTree = "<group>"; };
+		46717CB81BDF705B00320A22 /* DVTAssertionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAssertionHandler.h; sourceTree = "<group>"; };
+		46717CB91BDF705B00320A22 /* DVTAssertionHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAssertionHandling.h; sourceTree = "<group>"; };
+		46717CBA1BDF705B00320A22 /* DVTAutosynchingProxyArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTAutosynchingProxyArray.h; sourceTree = "<group>"; };
+		46717CBB1BDF705B00320A22 /* DVTBasicDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTBasicDevice.h; sourceTree = "<group>"; };
+		46717CBC1BDF705B00320A22 /* DVTBlockBasedCancellationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTBlockBasedCancellationToken.h; sourceTree = "<group>"; };
+		46717CBD1BDF705B00320A22 /* DVTBlockScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTBlockScanner.h; sourceTree = "<group>"; };
+		46717CBE1BDF705B00320A22 /* DVTBloomFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTBloomFilter.h; sourceTree = "<group>"; };
+		46717CBF1BDF705B00320A22 /* DVTBuildVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTBuildVersion.h; sourceTree = "<group>"; };
+		46717CC01BDF705B00320A22 /* DVTByteBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTByteBuffer.h; sourceTree = "<group>"; };
+		46717CC11BDF705B00320A22 /* DVTCancellable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCancellable.h; sourceTree = "<group>"; };
+		46717CC21BDF705B00320A22 /* DVTCancellationBlockCompletion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCancellationBlockCompletion.h; sourceTree = "<group>"; };
+		46717CC31BDF705B00320A22 /* DVTCertBasedDeveloperAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCertBasedDeveloperAccount.h; sourceTree = "<group>"; };
+		46717CC41BDF705B00320A22 /* DVTCertificateRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCertificateRecord.h; sourceTree = "<group>"; };
+		46717CC51BDF705B00320A22 /* DVTCertificateUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCertificateUtilities.h; sourceTree = "<group>"; };
+		46717CC61BDF705B00320A22 /* DVTCharStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCharStream.h; sourceTree = "<group>"; };
+		46717CC71BDF705B00320A22 /* DVTCheapReusableSubstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCheapReusableSubstring.h; sourceTree = "<group>"; };
+		46717CC81BDF705B00320A22 /* DVTCloudContainerRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCloudContainerRecord.h; sourceTree = "<group>"; };
+		46717CC91BDF705B00320A22 /* DVTCodesignableDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCodesignableDevice.h; sourceTree = "<group>"; };
+		46717CCA1BDF705B00320A22 /* DVTCodesignableDeviceSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCodesignableDeviceSnapshot.h; sourceTree = "<group>"; };
+		46717CCB1BDF705B00320A22 /* DVTCodesignParameterSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCodesignParameterSnapshot.h; sourceTree = "<group>"; };
+		46717CCC1BDF705B00320A22 /* DVTCodesignResolutionInputs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCodesignResolutionInputs.h; sourceTree = "<group>"; };
+		46717CCD1BDF705B00320A22 /* DVTCodesignResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCodesignResolver.h; sourceTree = "<group>"; };
+		46717CCE1BDF705B00320A22 /* DVTCollectCertificateFailuresOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCollectCertificateFailuresOperation.h; sourceTree = "<group>"; };
+		46717CCF1BDF705B00320A22 /* DVTCommandLineOptionDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCommandLineOptionDefinition.h; sourceTree = "<group>"; };
+		46717CD01BDF705B00320A22 /* DVTCommandLineParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCommandLineParser.h; sourceTree = "<group>"; };
+		46717CD11BDF705B00320A22 /* DVTCommandLineTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCommandLineTool.h; sourceTree = "<group>"; };
+		46717CD21BDF705B00320A22 /* DVTComparisonDocumentLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTComparisonDocumentLocation.h; sourceTree = "<group>"; };
+		46717CD31BDF705B00320A22 /* DVTCompressionInfoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCompressionInfoProvider.h; sourceTree = "<group>"; };
+		46717CD41BDF705B00320A22 /* DVTConcreteHashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTConcreteHashTable.h; sourceTree = "<group>"; };
+		46717CD51BDF705B00320A22 /* DVTConcreteMapTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTConcreteMapTable.h; sourceTree = "<group>"; };
+		46717CD61BDF705B00320A22 /* DVTConcreteMapTableValueEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTConcreteMapTableValueEnumerator.h; sourceTree = "<group>"; };
+		46717CD71BDF705B00320A22 /* DVTConcretePointerArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTConcretePointerArray.h; sourceTree = "<group>"; };
+		46717CD81BDF705B00320A22 /* DVTConcretePointerFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTConcretePointerFunctions.h; sourceTree = "<group>"; };
+		46717CD91BDF705B00320A22 /* DVTConfinementService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTConfinementService.h; sourceTree = "<group>"; };
+		46717CDA1BDF705B00320A22 /* DVTConfinementServiceConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTConfinementServiceConnection.h; sourceTree = "<group>"; };
+		46717CDB1BDF705B00320A22 /* DVTConsoleLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTConsoleLogger.h; sourceTree = "<group>"; };
+		46717CDC1BDF705B00320A22 /* DVTConsoleOutputFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTConsoleOutputFileHandle.h; sourceTree = "<group>"; };
+		46717CDD1BDF705B00320A22 /* DVTCopyOnWriteMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCopyOnWriteMutableArray.h; sourceTree = "<group>"; };
+		46717CDE1BDF705C00320A22 /* DVTCPlusPlusSourceModelParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCPlusPlusSourceModelParser.h; sourceTree = "<group>"; };
+		46717CDF1BDF705C00320A22 /* DVTCreateProfileOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCreateProfileOperation.h; sourceTree = "<group>"; };
+		46717CE01BDF705C00320A22 /* DVTCSourceModelParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCSourceModelParser.h; sourceTree = "<group>"; };
+		46717CE11BDF705C00320A22 /* DVTCustomDataOwnership.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCustomDataOwnership.h; sourceTree = "<group>"; };
+		46717CE21BDF705C00320A22 /* DVTCustomDataSpecifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCustomDataSpecifier.h; sourceTree = "<group>"; };
+		46717CE31BDF705C00320A22 /* DVTCustomDataStoring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCustomDataStoring.h; sourceTree = "<group>"; };
+		46717CE41BDF705C00320A22 /* DVTDeclaredPrimitiveFileDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeclaredPrimitiveFileDataType.h; sourceTree = "<group>"; };
+		46717CE51BDF705C00320A22 /* DVTDelayedInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDelayedInvocation.h; sourceTree = "<group>"; };
+		46717CE61BDF705C00320A22 /* DVTDelayedInvocationNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDelayedInvocationNew.h; sourceTree = "<group>"; };
+		46717CE71BDF705C00320A22 /* DVTDeleteProfileOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeleteProfileOperation.h; sourceTree = "<group>"; };
+		46717CE81BDF705C00320A22 /* DVTDeveloperAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeveloperAccount.h; sourceTree = "<group>"; };
+		46717CE91BDF705C00320A22 /* DVTDeveloperAccountCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeveloperAccountCredentials.h; sourceTree = "<group>"; };
+		46717CEA1BDF705C00320A22 /* DVTDeveloperAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeveloperAccountManager.h; sourceTree = "<group>"; };
+		46717CEB1BDF705C00320A22 /* DVTDeveloperAccountSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeveloperAccountSession.h; sourceTree = "<group>"; };
+		46717CEC1BDF705C00320A22 /* DVTDeveloperInfoOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeveloperInfoOperation.h; sourceTree = "<group>"; };
+		46717CED1BDF705C00320A22 /* DVTDeveloperPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeveloperPaths.h; sourceTree = "<group>"; };
+		46717CEE1BDF705C00320A22 /* DVTDeveloperPortalDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeveloperPortalDatabase.h; sourceTree = "<group>"; };
+		46717CEF1BDF705C00320A22 /* DVTDeveloperPortalResponseWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeveloperPortalResponseWrapper.h; sourceTree = "<group>"; };
+		46717CF01BDF705C00320A22 /* DVTDeveloperPortalServiceConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeveloperPortalServiceConnection.h; sourceTree = "<group>"; };
+		46717CF11BDF705C00320A22 /* DVTDeveloperProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeveloperProfile.h; sourceTree = "<group>"; };
+		46717CF21BDF705C00320A22 /* DVTDeveloperProfileAccountProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeveloperProfileAccountProvider.h; sourceTree = "<group>"; };
+		46717CF31BDF705C00320A22 /* DVTDeveloperRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeveloperRecord.h; sourceTree = "<group>"; };
+		46717CF41BDF705C00320A22 /* DVTDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDevice.h; sourceTree = "<group>"; };
+		46717CF51BDF705C00320A22 /* DVTDeviceApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeviceApplication.h; sourceTree = "<group>"; };
+		46717CF61BDF705C00320A22 /* DVTDeviceApplicationBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeviceApplicationBase.h; sourceTree = "<group>"; };
+		46717CF71BDF705C00320A22 /* DVTDeviceApplicationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeviceApplicationItem.h; sourceTree = "<group>"; };
+		46717CF81BDF705C00320A22 /* DVTDeviceApplicationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeviceApplicationProvider.h; sourceTree = "<group>"; };
+		46717CF91BDF705C00320A22 /* DVTDeviceCapability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeviceCapability.h; sourceTree = "<group>"; };
+		46717CFA1BDF705C00320A22 /* DVTDeviceCapabilityMatchAnythingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeviceCapabilityMatchAnythingObject.h; sourceTree = "<group>"; };
+		46717CFB1BDF705C00320A22 /* DVTDeviceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeviceLocator.h; sourceTree = "<group>"; };
+		46717CFC1BDF705C00320A22 /* DVTDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeviceManager.h; sourceTree = "<group>"; };
+		46717CFD1BDF705C00320A22 /* DVTDeviceRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeviceRecord.h; sourceTree = "<group>"; };
+		46717CFE1BDF705C00320A22 /* DVTDeviceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeviceService.h; sourceTree = "<group>"; };
+		46717CFF1BDF705C00320A22 /* DVTDeviceSupportFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeviceSupportFiles.h; sourceTree = "<group>"; };
+		46717D001BDF705C00320A22 /* DVTDeviceType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDeviceType.h; sourceTree = "<group>"; };
+		46717D011BDF705C00320A22 /* DVTDiffBinaryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDiffBinaryDataSource.h; sourceTree = "<group>"; };
+		46717D021BDF705C00320A22 /* DVTDiffCharacterDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDiffCharacterDataSource.h; sourceTree = "<group>"; };
+		46717D031BDF705C00320A22 /* DVTDiffContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDiffContext.h; sourceTree = "<group>"; };
+		46717D041BDF705C00320A22 /* DVTDiffDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDiffDataSource.h; sourceTree = "<group>"; };
+		46717D051BDF705C00320A22 /* DVTDiffDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDiffDescriptor.h; sourceTree = "<group>"; };
+		46717D061BDF705C00320A22 /* DVTDiffHashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDiffHashing.h; sourceTree = "<group>"; };
+		46717D071BDF705C00320A22 /* DVTDiffLineDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDiffLineDataSource.h; sourceTree = "<group>"; };
+		46717D081BDF705C00320A22 /* DVTDiffWordDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDiffWordDataSource.h; sourceTree = "<group>"; };
+		46717D091BDF705C00320A22 /* DVTDirectoryBasedCustomDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDirectoryBasedCustomDataStore.h; sourceTree = "<group>"; };
+		46717D0A1BDF705C00320A22 /* DVTDirectoryServicesSessionDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDirectoryServicesSessionDescription.h; sourceTree = "<group>"; };
+		46717D0B1BDF705C00320A22 /* DVTDispatchLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDispatchLock.h; sourceTree = "<group>"; };
+		46717D0C1BDF705C00320A22 /* DVTDispatchLock_ReadWrite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDispatchLock_ReadWrite.h; sourceTree = "<group>"; };
+		46717D0D1BDF705C00320A22 /* DVTDispatchLock_Recursive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDispatchLock_Recursive.h; sourceTree = "<group>"; };
+		46717D0E1BDF705C00320A22 /* DVTDocumentFragmentFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDocumentFragmentFilter.h; sourceTree = "<group>"; };
+		46717D0F1BDF705C00320A22 /* DVTDocumentLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDocumentLocation.h; sourceTree = "<group>"; };
+		46717D101BDF705C00320A22 /* DVTDotSeparatedVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDotSeparatedVersion.h; sourceTree = "<group>"; };
+		46717D111BDF705C00320A22 /* DVTDownloadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadable.h; sourceTree = "<group>"; };
+		46717D121BDF705C00320A22 /* DVTDownloadable_PKInstallClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadable_PKInstallClientDelegate.h; sourceTree = "<group>"; };
+		46717D131BDF705C00320A22 /* DVTDownloadableDependency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadableDependency.h; sourceTree = "<group>"; };
+		46717D141BDF705C00320A22 /* DVTDownloadableIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadableIndex.h; sourceTree = "<group>"; };
+		46717D151BDF705C00320A22 /* DVTDownloadableInstallationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadableInstallationHelper.h; sourceTree = "<group>"; };
+		46717D161BDF705C00320A22 /* DVTDownloadableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadableManager.h; sourceTree = "<group>"; };
+		46717D171BDF705C00320A22 /* DVTDownloadableManagerIOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadableManagerIOCache.h; sourceTree = "<group>"; };
+		46717D181BDF705C00320A22 /* DVTDownloadableOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadableOperation.h; sourceTree = "<group>"; };
+		46717D191BDF705C00320A22 /* DVTDownloadableOperationDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadableOperationDownload.h; sourceTree = "<group>"; };
+		46717D1A1BDF705C00320A22 /* DVTDownloadableProgressToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadableProgressToken.h; sourceTree = "<group>"; };
+		46717D1B1BDF705C00320A22 /* DVTDownloadableProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadableProvider.h; sourceTree = "<group>"; };
+		46717D1C1BDF705C00320A22 /* DVTDownloadCertificateOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadCertificateOperation.h; sourceTree = "<group>"; };
+		46717D1D1BDF705C00320A22 /* DVTDownloadDeveloperIDCertificateAuthorityOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadDeveloperIDCertificateAuthorityOperation.h; sourceTree = "<group>"; };
+		46717D1E1BDF705C00320A22 /* DVTDownloadProfileOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadProfileOperation.h; sourceTree = "<group>"; };
+		46717D1F1BDF705C00320A22 /* DVTDownloadTeamProfileOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadTeamProfileOperation.h; sourceTree = "<group>"; };
+		46717D201BDF705C00320A22 /* DVTDownloadWWDRCertificateAuthorityOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDownloadWWDRCertificateAuthorityOperation.h; sourceTree = "<group>"; };
+		46717D211BDF705C00320A22 /* DVTDTApplicationWorkspaceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDTApplicationWorkspaceClient.h; sourceTree = "<group>"; };
+		46717D221BDF705C00320A22 /* DVTDynamicLogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDynamicLogController.h; sourceTree = "<group>"; };
+		46717D231BDF705C00320A22 /* DVTDynamicPrimitiveFileDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTDynamicPrimitiveFileDataType.h; sourceTree = "<group>"; };
+		46717D241BDF705C00320A22 /* DVTEncodableIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTEncodableIndex.h; sourceTree = "<group>"; };
+		46717D251BDF705C00320A22 /* DVTEncodableIndexEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTEncodableIndexEntry.h; sourceTree = "<group>"; };
+		46717D261BDF705C00320A22 /* DVTExtendedPlatformInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTExtendedPlatformInfo.h; sourceTree = "<group>"; };
+		46717D271BDF705C00320A22 /* DVTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTExtension.h; sourceTree = "<group>"; };
+		46717D281BDF705C00320A22 /* DVTExtensionAttributeDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTExtensionAttributeDescription.h; sourceTree = "<group>"; };
+		46717D291BDF705C00320A22 /* DVTExtensionElementDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTExtensionElementDescription.h; sourceTree = "<group>"; };
+		46717D2A1BDF705C00320A22 /* DVTExtensionParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTExtensionParameter.h; sourceTree = "<group>"; };
+		46717D2B1BDF705C00320A22 /* DVTExtensionPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTExtensionPoint.h; sourceTree = "<group>"; };
+		46717D2C1BDF705C00320A22 /* DVTExtensionPropertyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTExtensionPropertyDescription.h; sourceTree = "<group>"; };
+		46717D2D1BDF705C00320A22 /* DVTExtraXMLArchiveData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTExtraXMLArchiveData.h; sourceTree = "<group>"; };
+		46717D2E1BDF705C00320A22 /* DVTExtraXMLAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTExtraXMLAttribute.h; sourceTree = "<group>"; };
+		46717D2F1BDF705C00320A22 /* DVTExtraXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTExtraXMLElement.h; sourceTree = "<group>"; };
+		46717D301BDF705C00320A22 /* DVTFetchOrCreateAppIDOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFetchOrCreateAppIDOperation.h; sourceTree = "<group>"; };
+		46717D311BDF705C00320A22 /* DVTFileDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFileDataType.h; sourceTree = "<group>"; };
+		46717D321BDF705C00320A22 /* DVTFileDataTypeDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFileDataTypeDetection.h; sourceTree = "<group>"; };
+		46717D331BDF705C00320A22 /* DVTFileDataTypeDetectionMagicCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFileDataTypeDetectionMagicCache.h; sourceTree = "<group>"; };
+		46717D341BDF705C00320A22 /* DVTFileDataTypeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFileDataTypeDetector.h; sourceTree = "<group>"; };
+		46717D351BDF705C00320A22 /* DVTFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFileLogger.h; sourceTree = "<group>"; };
+		46717D361BDF705C00320A22 /* DVTFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFilePath.h; sourceTree = "<group>"; };
+		46717D371BDF705C00320A22 /* DVTFilePathEventWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFilePathEventWatcher.h; sourceTree = "<group>"; };
+		46717D381BDF705C00320A22 /* DVTFileSystemRepresentationProviding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFileSystemRepresentationProviding.h; sourceTree = "<group>"; };
+		46717D391BDF705C00320A22 /* DVTFileSystemVNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFileSystemVNode.h; sourceTree = "<group>"; };
+		46717D3A1BDF705C00320A22 /* DVTFileWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFileWrapper.h; sourceTree = "<group>"; };
+		46717D3B1BDF705C00320A22 /* DVTFindDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFindDescriptor.h; sourceTree = "<group>"; };
+		46717D3C1BDF705C00320A22 /* DVTFindRegularExpressionDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFindRegularExpressionDescriptor.h; sourceTree = "<group>"; };
+		46717D3D1BDF705C00320A22 /* DVTFindRegularExpressionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFindRegularExpressionResult.h; sourceTree = "<group>"; };
+		46717D3E1BDF705C00320A22 /* DVTFindResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFindResult.h; sourceTree = "<group>"; };
+		46717D3F1BDF705C00320A22 /* DVTFindTextualDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFindTextualDescriptor.h; sourceTree = "<group>"; };
+		46717D401BDF705C00320A22 /* DVTFirstLaunchPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFirstLaunchPackage.h; sourceTree = "<group>"; };
+		46717D411BDF705C00320A22 /* DVTFirstLaunchPackageInstallationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFirstLaunchPackageInstallationHelper.h; sourceTree = "<group>"; };
+		46717D421BDF705C00320A22 /* DVTFuture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFuture.h; sourceTree = "<group>"; };
+		46717D431BDF705C00320A22 /* DVTGeneratedContentProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTGeneratedContentProvider.h; sourceTree = "<group>"; };
+		46717D441BDF705C00320A22 /* DVTGlobalCustomDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTGlobalCustomDataStore.h; sourceTree = "<group>"; };
+		46717D451BDF705C00320A22 /* DVTHashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTHashTable.h; sourceTree = "<group>"; };
+		46717D461BDF705C00320A22 /* DVTHTMLEntityScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTHTMLEntityScanner.h; sourceTree = "<group>"; };
+		46717D471BDF705C00320A22 /* DVTHTMLScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTHTMLScanner.h; sourceTree = "<group>"; };
+		46717D481BDF705C00320A22 /* DVTIndexBackedDownloadableProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTIndexBackedDownloadableProvider.h; sourceTree = "<group>"; };
+		46717D491BDF705C00320A22 /* DVTInvalidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTInvalidation.h; sourceTree = "<group>"; };
+		46717D4A1BDF705C00320A22 /* DVTInvalidationMixIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTInvalidationMixIn.h; sourceTree = "<group>"; };
+		46717D4B1BDF705C00320A22 /* DVTInvalidExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTInvalidExtension.h; sourceTree = "<group>"; };
+		46717D4C1BDF705C00320A22 /* DVTITunesConnectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTITunesConnectProxy.h; sourceTree = "<group>"; };
+		46717D4D1BDF705C00320A22 /* DVTITunesConnectProxyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTITunesConnectProxyDelegate.h; sourceTree = "<group>"; };
+		46717D4E1BDF705C00320A22 /* DVTKeywordScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTKeywordScanner.h; sourceTree = "<group>"; };
+		46717D4F1BDF705C00320A22 /* DVTKnownStringMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTKnownStringMapping.h; sourceTree = "<group>"; };
+		46717D501BDF705C00320A22 /* DVTKVCMethodStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTKVCMethodStyle.h; sourceTree = "<group>"; };
+		46717D511BDF705C00320A22 /* DVTKVOConditionValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTKVOConditionValidator.h; sourceTree = "<group>"; };
+		46717D521BDF705C00320A22 /* DVTLanguageSpecification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTLanguageSpecification.h; sourceTree = "<group>"; };
+		46717D531BDF705C00320A22 /* DVTLibraryFragmentFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTLibraryFragmentFilter.h; sourceTree = "<group>"; };
+		46717D541BDF705C00320A22 /* DVTLicenseAgreementHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTLicenseAgreementHelper.h; sourceTree = "<group>"; };
+		46717D551BDF705C00320A22 /* DVTListAppIDsOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTListAppIDsOperation.h; sourceTree = "<group>"; };
+		46717D561BDF705C00320A22 /* DVTListApplicationGroupsForTeamOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTListApplicationGroupsForTeamOperation.h; sourceTree = "<group>"; };
+		46717D571BDF705C00320A22 /* DVTListCertsOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTListCertsOperation.h; sourceTree = "<group>"; };
+		46717D581BDF705C00320A22 /* DVTListCloudContainersForAppIDOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTListCloudContainersForAppIDOperation.h; sourceTree = "<group>"; };
+		46717D591BDF705C00320A22 /* DVTListCloudContainersForTeamOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTListCloudContainersForTeamOperation.h; sourceTree = "<group>"; };
+		46717D5A1BDF705C00320A22 /* DVTListDevicesOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTListDevicesOperation.h; sourceTree = "<group>"; };
+		46717D5B1BDF705C00320A22 /* DVTListEverythingOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTListEverythingOperation.h; sourceTree = "<group>"; };
+		46717D5C1BDF705C00320A22 /* DVTListOMCIdentifiersForTeamOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTListOMCIdentifiersForTeamOperation.h; sourceTree = "<group>"; };
+		46717D5D1BDF705C00320A22 /* DVTListProvisioningProfilesOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTListProvisioningProfilesOperation.h; sourceTree = "<group>"; };
+		46717D5E1BDF705C00320A22 /* DVTListShoeboxIDsOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTListShoeboxIDsOperation.h; sourceTree = "<group>"; };
+		46717D5F1BDF705C00320A22 /* DVTListTeamOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTListTeamOperation.h; sourceTree = "<group>"; };
+		46717D601BDF705C00320A22 /* DVTLocalComputer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTLocalComputer.h; sourceTree = "<group>"; };
+		46717D611BDF705C00320A22 /* DVTLocalComputerLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTLocalComputerLocator.h; sourceTree = "<group>"; };
+		46717D621BDF705C00320A22 /* DVTLocale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTLocale.h; sourceTree = "<group>"; };
+		46717D631BDF705C00320A22 /* DVTLocalProcessInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTLocalProcessInformation.h; sourceTree = "<group>"; };
+		46717D641BDF705C00320A22 /* DVTLogAspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTLogAspect.h; sourceTree = "<group>"; };
+		46717D651BDF705C00320A22 /* DVTLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTLogger.h; sourceTree = "<group>"; };
+		46717D661BDF705C00320A22 /* DVTMacroAssignmentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroAssignmentInfo.h; sourceTree = "<group>"; };
+		46717D671BDF705C00320A22 /* DVTMacroDefinitionCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroDefinitionCondition.h; sourceTree = "<group>"; };
+		46717D681BDF705C00320A22 /* DVTMacroDefinitionConditionParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroDefinitionConditionParameter.h; sourceTree = "<group>"; };
+		46717D691BDF705C00320A22 /* DVTMacroDefinitionConditionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroDefinitionConditionSet.h; sourceTree = "<group>"; };
+		46717D6A1BDF705C00320A22 /* DVTMacroDefinitionTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroDefinitionTable.h; sourceTree = "<group>"; };
+		46717D6B1BDF705C00320A22 /* DVTMacroExpansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansion.h; sourceTree = "<group>"; };
+		46717D6C1BDF705C00320A22 /* DVTMacroExpansionBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionBlock.h; sourceTree = "<group>"; };
+		46717D6D1BDF705C00320A22 /* DVTMacroExpansionIntegerMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionIntegerMetric.h; sourceTree = "<group>"; };
+		46717D6E1BDF705C00320A22 /* DVTMacroExpansionOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionOperator.h; sourceTree = "<group>"; };
+		46717D6F1BDF705C00320A22 /* DVTMacroExpansionReplacementOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionReplacementOperator.h; sourceTree = "<group>"; };
+		46717D701BDF705C00320A22 /* DVTMacroExpansionReplacementOperator_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionReplacementOperator_base.h; sourceTree = "<group>"; };
+		46717D711BDF705C00320A22 /* DVTMacroExpansionReplacementOperator_dir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionReplacementOperator_dir.h; sourceTree = "<group>"; };
+		46717D721BDF705C00320A22 /* DVTMacroExpansionReplacementOperator_file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionReplacementOperator_file.h; sourceTree = "<group>"; };
+		46717D731BDF705C00320A22 /* DVTMacroExpansionReplacementOperator_suffix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionReplacementOperator_suffix.h; sourceTree = "<group>"; };
+		46717D741BDF705C00320A22 /* DVTMacroExpansionReplacementOperatorWithParseError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionReplacementOperatorWithParseError.h; sourceTree = "<group>"; };
+		46717D751BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionRetrievalOperator.h; sourceTree = "<group>"; };
+		46717D761BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionRetrievalOperator_base.h; sourceTree = "<group>"; };
+		46717D771BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_c99extidentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionRetrievalOperator_c99extidentifier.h; sourceTree = "<group>"; };
+		46717D781BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_dir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionRetrievalOperator_dir.h; sourceTree = "<group>"; };
+		46717D791BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionRetrievalOperator_file.h; sourceTree = "<group>"; };
+		46717D7A1BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_identifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionRetrievalOperator_identifier.h; sourceTree = "<group>"; };
+		46717D7B1BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_lower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionRetrievalOperator_lower.h; sourceTree = "<group>"; };
+		46717D7C1BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_quote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionRetrievalOperator_quote.h; sourceTree = "<group>"; };
+		46717D7D1BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_rfc1034identifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionRetrievalOperator_rfc1034identifier.h; sourceTree = "<group>"; };
+		46717D7E1BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_standardizepath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionRetrievalOperator_standardizepath.h; sourceTree = "<group>"; };
+		46717D7F1BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_suffix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionRetrievalOperator_suffix.h; sourceTree = "<group>"; };
+		46717D801BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_upper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionRetrievalOperator_upper.h; sourceTree = "<group>"; };
+		46717D811BDF705C00320A22 /* DVTMacroExpansionRetrievalOperatorWithParseError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionRetrievalOperatorWithParseError.h; sourceTree = "<group>"; };
+		46717D821BDF705C00320A22 /* DVTMacroExpansionScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionScope.h; sourceTree = "<group>"; };
+		46717D831BDF705C00320A22 /* DVTMacroExpansionStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionStatistics.h; sourceTree = "<group>"; };
+		46717D841BDF705C00320A22 /* DVTMacroExpansionString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionString.h; sourceTree = "<group>"; };
+		46717D851BDF705C00320A22 /* DVTMacroExpansionString_Concatenation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionString_Concatenation.h; sourceTree = "<group>"; };
+		46717D861BDF705C00320A22 /* DVTMacroExpansionString_Literal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionString_Literal.h; sourceTree = "<group>"; };
+		46717D871BDF705C00320A22 /* DVTMacroExpansionString_StringSubstitution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionString_StringSubstitution.h; sourceTree = "<group>"; };
+		46717D881BDF705C00320A22 /* DVTMacroExpansionString_Substitution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionString_Substitution.h; sourceTree = "<group>"; };
+		46717D891BDF705C00320A22 /* DVTMacroExpansionStringList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionStringList.h; sourceTree = "<group>"; };
+		46717D8A1BDF705C00320A22 /* DVTMacroExpansionStringList_Literal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionStringList_Literal.h; sourceTree = "<group>"; };
+		46717D8B1BDF705C00320A22 /* DVTMacroExpansionStringList_NonLiteral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroExpansionStringList_NonLiteral.h; sourceTree = "<group>"; };
+		46717D8C1BDF705C00320A22 /* DVTMacroNameRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroNameRegistry.h; sourceTree = "<group>"; };
+		46717D8D1BDF705C00320A22 /* DVTMacroNameRegistryRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroNameRegistryRegistration.h; sourceTree = "<group>"; };
+		46717D8E1BDF705C00320A22 /* DVTMacroNameString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMacroNameString.h; sourceTree = "<group>"; };
+		46717D8F1BDF705C00320A22 /* DVTMapTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMapTable.h; sourceTree = "<group>"; };
+		46717D901BDF705C00320A22 /* DVTMemorySnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMemorySnapshot.h; sourceTree = "<group>"; };
+		46717D911BDF705C00320A22 /* DVTMessageTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMessageTrace.h; sourceTree = "<group>"; };
+		46717D921BDF705C00320A22 /* DVTMixIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMixIn.h; sourceTree = "<group>"; };
+		46717D931BDF705C00320A22 /* DVTMockDeveloperAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMockDeveloperAccount.h; sourceTree = "<group>"; };
+		46717D941BDF705C00320A22 /* DVTMockProvisioningProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMockProvisioningProfile.h; sourceTree = "<group>"; };
+		46717D951BDF705C00320A22 /* DVTMockProvisioningProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMockProvisioningProfileManager.h; sourceTree = "<group>"; };
+		46717D961BDF705C00320A22 /* DVTMockSigningCertificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMockSigningCertificate.h; sourceTree = "<group>"; };
+		46717D971BDF705C00320A22 /* DVTMockSigningCertificateSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMockSigningCertificateSource.h; sourceTree = "<group>"; };
+		46717D981BDF705C00320A22 /* DVTModelGraphTransactionScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTModelGraphTransactionScope.h; sourceTree = "<group>"; };
+		46717D991BDF705C00320A22 /* DVTModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTModelObject.h; sourceTree = "<group>"; };
+		46717D9A1BDF705C00320A22 /* DVTModelObjectGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTModelObjectGraph.h; sourceTree = "<group>"; };
+		46717D9B1BDF705C00320A22 /* DVTModelTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTModelTree.h; sourceTree = "<group>"; };
+		46717D9C1BDF705C00320A22 /* DVTModelTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTModelTreeNode.h; sourceTree = "<group>"; };
+		46717D9D1BDF705C00320A22 /* DVTMountedFileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMountedFileSystem.h; sourceTree = "<group>"; };
+		46717D9E1BDF705C00320A22 /* DVTMTReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMTReport.h; sourceTree = "<group>"; };
+		46717D9F1BDF705C00320A22 /* DVTMutableKnownStringSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMutableKnownStringSet.h; sourceTree = "<group>"; };
+		46717DA01BDF705C00320A22 /* DVTMutableOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMutableOrderedDictionary.h; sourceTree = "<group>"; };
+		46717DA11BDF705C00320A22 /* DVTMutableOrderedSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMutableOrderedSet.h; sourceTree = "<group>"; };
+		46717DA21BDF705C00320A22 /* DVTMutableRangeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTMutableRangeArray.h; sourceTree = "<group>"; };
+		46717DA31BDF705C00320A22 /* DVTNotificationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTNotificationToken.h; sourceTree = "<group>"; };
+		46717DA41BDF705C00320A22 /* DVTNumberScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTNumberScanner.h; sourceTree = "<group>"; };
+		46717DA51BDF705C00320A22 /* DVTObjCPlusPlusSourceModelParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTObjCPlusPlusSourceModelParser.h; sourceTree = "<group>"; };
+		46717DA61BDF705C00320A22 /* DVTObjCSourceModelParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTObjCSourceModelParser.h; sourceTree = "<group>"; };
+		46717DA71BDF705C00320A22 /* DVTObjectDeallocationMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTObjectDeallocationMonitor.h; sourceTree = "<group>"; };
+		46717DA81BDF705C00320A22 /* DVTObservableObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTObservableObjectProxy.h; sourceTree = "<group>"; };
+		46717DA91BDF705C00320A22 /* DVTObserveXPCServicesProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTObserveXPCServicesProtocol.h; sourceTree = "<group>"; };
+		46717DAA1BDF705C00320A22 /* DVTObserveXPCServicesProtocol_Callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTObserveXPCServicesProtocol_Callback.h; sourceTree = "<group>"; };
+		46717DAB1BDF705C00320A22 /* DVTObservingBlockToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTObservingBlockToken.h; sourceTree = "<group>"; };
+		46717DAC1BDF705C00320A22 /* DVTObservingToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTObservingToken.h; sourceTree = "<group>"; };
+		46717DAD1BDF705C00320A22 /* DVTObsoleteUnarchivedObjectPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTObsoleteUnarchivedObjectPlaceholder.h; sourceTree = "<group>"; };
+		46717DAE1BDF705C00320A22 /* DVTOMCRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTOMCRecord.h; sourceTree = "<group>"; };
+		46717DAF1BDF705C00320A22 /* DVTOneShotBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTOneShotBlock.h; sourceTree = "<group>"; };
+		46717DB01BDF705C00320A22 /* DVTOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTOperation.h; sourceTree = "<group>"; };
+		46717DB11BDF705C00320A22 /* DVTOperationGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTOperationGroup.h; sourceTree = "<group>"; };
+		46717DB21BDF705C00320A22 /* DVTOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTOSVersion.h; sourceTree = "<group>"; };
+		46717DB31BDF705C00320A22 /* DVTPatienceDiffContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPatienceDiffContext.h; sourceTree = "<group>"; };
+		46717DB41BDF705C00320A22 /* DVTPerformanceCheckpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPerformanceCheckpoint.h; sourceTree = "<group>"; };
+		46717DB51BDF705C00320A22 /* DVTPerformanceMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPerformanceMetric.h; sourceTree = "<group>"; };
+		46717DB61BDF705C00320A22 /* DVTPerformanceStatistic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPerformanceStatistic.h; sourceTree = "<group>"; };
+		46717DB71BDF705C00320A22 /* DVTPerformanceTestLogger_TimeForWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPerformanceTestLogger_TimeForWork.h; sourceTree = "<group>"; };
+		46717DB81BDF705C00320A22 /* DVTPerformanceTestOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPerformanceTestOutput.h; sourceTree = "<group>"; };
+		46717DB91BDF705C00320A22 /* DVTPerformanceTestParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPerformanceTestParser.h; sourceTree = "<group>"; };
+		46717DBA1BDF705C00320A22 /* DVTPerformanceTestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPerformanceTestResult.h; sourceTree = "<group>"; };
+		46717DBB1BDF705C00320A22 /* DVTPinger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPinger.h; sourceTree = "<group>"; };
+		46717DBC1BDF705C00320A22 /* DVTPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPipe.h; sourceTree = "<group>"; };
+		46717DBD1BDF705C00320A22 /* DVTPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPlatform.h; sourceTree = "<group>"; };
+		46717DBE1BDF705C00320A22 /* DVTPlatformFamily.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPlatformFamily.h; sourceTree = "<group>"; };
+		46717DBF1BDF705C00320A22 /* DVTPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPlugIn.h; sourceTree = "<group>"; };
+		46717DC01BDF705C00320A22 /* DVTPlugInLocalizedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPlugInLocalizedString.h; sourceTree = "<group>"; };
+		46717DC11BDF705C00320A22 /* DVTPlugInLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPlugInLocator.h; sourceTree = "<group>"; };
+		46717DC21BDF705C00320A22 /* DVTPlugInManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPlugInManager.h; sourceTree = "<group>"; };
+		46717DC31BDF705C00320A22 /* DVTPlugInScanRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPlugInScanRecord.h; sourceTree = "<group>"; };
+		46717DC41BDF705C00320A22 /* DVTPointerArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPointerArray.h; sourceTree = "<group>"; };
+		46717DC51BDF705C00320A22 /* DVTPointerFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPointerFunctions.h; sourceTree = "<group>"; };
+		46717DC61BDF705C00320A22 /* DVTPortalInfoOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPortalInfoOperation.h; sourceTree = "<group>"; };
+		46717DC71BDF705C00320A22 /* DVTPortalOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPortalOperation.h; sourceTree = "<group>"; };
+		46717DC81BDF705C00320A22 /* DVTPortalOperationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPortalOperationToken.h; sourceTree = "<group>"; };
+		46717DC91BDF705C00320A22 /* DVTPrimitiveFileDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPrimitiveFileDataType.h; sourceTree = "<group>"; };
+		46717DCA1BDF705C00320A22 /* DVTProcessInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTProcessInformation.h; sourceTree = "<group>"; };
+		46717DCB1BDF705C00320A22 /* DVTProgressReporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTProgressReporting.h; sourceTree = "<group>"; };
+		46717DCC1BDF705C00320A22 /* DVTPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPromise.h; sourceTree = "<group>"; };
+		46717DCD1BDF705C00320A22 /* DVTPropertyListEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPropertyListEncoding.h; sourceTree = "<group>"; };
+		46717DCE1BDF705C00320A22 /* DVTProvisioningProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTProvisioningProfile.h; sourceTree = "<group>"; };
+		46717DCF1BDF705C00320A22 /* DVTProvisioningProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTProvisioningProfileManager.h; sourceTree = "<group>"; };
+		46717DD01BDF705C00320A22 /* DVTProvisioningProfileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTProvisioningProfileProvider.h; sourceTree = "<group>"; };
+		46717DD11BDF705C00320A22 /* DVTProvisioningProfileRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTProvisioningProfileRecord.h; sourceTree = "<group>"; };
+		46717DD21BDF705C00320A22 /* DVTPythonScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTPythonScanner.h; sourceTree = "<group>"; };
+		46717DD31BDF705C00320A22 /* DVTRangeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTRangeArray.h; sourceTree = "<group>"; };
+		46717DD41BDF705C00320A22 /* DVTReferenceResolutionStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTReferenceResolutionStrategy.h; sourceTree = "<group>"; };
+		46717DD51BDF705C00320A22 /* DVTReferenceResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTReferenceResolver.h; sourceTree = "<group>"; };
+		46717DD61BDF705C00320A22 /* DVTRegexCommandLineOptionDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTRegexCommandLineOptionDefinition.h; sourceTree = "<group>"; };
+		46717DD71BDF705C00320A22 /* DVTRegExScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTRegExScanner.h; sourceTree = "<group>"; };
+		46717DD81BDF705C00320A22 /* DVTRegistrable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTRegistrable.h; sourceTree = "<group>"; };
+		46717DD91BDF705C00320A22 /* DVTRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTRegistry.h; sourceTree = "<group>"; };
+		46717DDA1BDF705C00320A22 /* DVTRegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTRegularExpression.h; sourceTree = "<group>"; };
+		46717DDB1BDF705C00320A22 /* DVTRegularExpressionMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTRegularExpressionMatch.h; sourceTree = "<group>"; };
+		46717DDC1BDF705C00320A22 /* DVTRelativeDateFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTRelativeDateFormatting.h; sourceTree = "<group>"; };
+		46717DDD1BDF705C00320A22 /* DVTRescindCallbackObservingToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTRescindCallbackObservingToken.h; sourceTree = "<group>"; };
+		46717DDE1BDF705C00320A22 /* DVTRevokeCertificateOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTRevokeCertificateOperation.h; sourceTree = "<group>"; };
+		46717DDF1BDF705C00320A22 /* DVTRoleRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTRoleRecord.h; sourceTree = "<group>"; };
+		46717DE01BDF705C00320A22 /* DVTRuleScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTRuleScanner.h; sourceTree = "<group>"; };
+		46717DE11BDF705C00320A22 /* DVTScannerRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTScannerRule.h; sourceTree = "<group>"; };
+		46717DE21BDF705C00320A22 /* DVTSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSDK.h; sourceTree = "<group>"; };
+		46717DE31BDF705C00320A22 /* DVTSearchPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSearchPath.h; sourceTree = "<group>"; };
+		46717DE41BDF705C00320A22 /* DVTSelectorBasedObservingToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSelectorBasedObservingToken.h; sourceTree = "<group>"; };
+		46717DE51BDF705C00320A22 /* DVTSelfInstrumentationSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSelfInstrumentationSession.h; sourceTree = "<group>"; };
+		46717DE61BDF705C00320A22 /* DVTSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSemaphore.h; sourceTree = "<group>"; };
+		46717DE71BDF705C00320A22 /* DVTServerCancelJoinTeamOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTServerCancelJoinTeamOperation.h; sourceTree = "<group>"; };
+		46717DE81BDF705C00320A22 /* DVTServerDownloadTeamClientCertificateOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTServerDownloadTeamClientCertificateOperation.h; sourceTree = "<group>"; };
+		46717DE91BDF705C00320A22 /* DVTServerDownloadTeamDevelopmentCertificateOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTServerDownloadTeamDevelopmentCertificateOperation.h; sourceTree = "<group>"; };
+		46717DEA1BDF705C00320A22 /* DVTServerJoinTeamOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTServerJoinTeamOperation.h; sourceTree = "<group>"; };
+		46717DEB1BDF705C00320A22 /* DVTServerRenewTeamMembershipTeamOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTServerRenewTeamMembershipTeamOperation.h; sourceTree = "<group>"; };
+		46717DEC1BDF705C00320A22 /* DVTServerRequestTeamDevelopmentCertificateOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTServerRequestTeamDevelopmentCertificateOperation.h; sourceTree = "<group>"; };
+		46717DED1BDF705C00320A22 /* DVTServerRevokeTeamMembershipTeamOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTServerRevokeTeamMembershipTeamOperation.h; sourceTree = "<group>"; };
+		46717DEE1BDF705C00320A22 /* DVTSharedObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSharedObserver.h; sourceTree = "<group>"; };
+		46717DEF1BDF705C00320A22 /* DVTShoeboxIDRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTShoeboxIDRecord.h; sourceTree = "<group>"; };
+		46717DF01BDF705C00320A22 /* DVTSigningCertificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSigningCertificate.h; sourceTree = "<group>"; };
+		46717DF11BDF705C00320A22 /* DVTSigningCertificateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSigningCertificateManager.h; sourceTree = "<group>"; };
+		46717DF21BDF705C00320A22 /* DVTSigningCertificateSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSigningCertificateSource.h; sourceTree = "<group>"; };
+		46717DF31BDF705C00320A22 /* DVTSigningCertificateSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSigningCertificateSourceDelegate.h; sourceTree = "<group>"; };
+		46717DF41BDF705C00320A22 /* DVTSigningIdentitySnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSigningIdentitySnapshot.h; sourceTree = "<group>"; };
+		46717DF51BDF705C00320A22 /* DVTSimpleDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSimpleDeserializer.h; sourceTree = "<group>"; };
+		46717DF61BDF705C00320A22 /* DVTSimplePlainTextDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSimplePlainTextDeserializer.h; sourceTree = "<group>"; };
+		46717DF71BDF705C00320A22 /* DVTSimplePlainTextSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSimplePlainTextSerializer.h; sourceTree = "<group>"; };
+		46717DF81BDF705C00320A22 /* DVTSimpleSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSimpleSerialization.h; sourceTree = "<group>"; };
+		46717DF91BDF705C00320A22 /* DVTSimpleSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSimpleSerializer.h; sourceTree = "<group>"; };
+		46717DFA1BDF705C00320A22 /* DVTSimpleXMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSimpleXMLWriter.h; sourceTree = "<group>"; };
+		46717DFB1BDF705C00320A22 /* DVTSourceCodeLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSourceCodeLanguage.h; sourceTree = "<group>"; };
+		46717DFC1BDF705C00320A22 /* DVTSourceCodeSymbolKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSourceCodeSymbolKind.h; sourceTree = "<group>"; };
+		46717DFD1BDF705C00320A22 /* DVTSourceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSourceModel.h; sourceTree = "<group>"; };
+		46717DFE1BDF705C00320A22 /* DVTSourceModelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSourceModelItem.h; sourceTree = "<group>"; };
+		46717DFF1BDF705C00320A22 /* DVTSourceModelParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSourceModelParser.h; sourceTree = "<group>"; };
+		46717E001BDF705C00320A22 /* DVTSourceModelParserInteriorProductionRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSourceModelParserInteriorProductionRule.h; sourceTree = "<group>"; };
+		46717E011BDF705C00320A22 /* DVTSourceModelParserProductionRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSourceModelParserProductionRule.h; sourceTree = "<group>"; };
+		46717E021BDF705C00320A22 /* DVTSourceModelParserProductionState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSourceModelParserProductionState.h; sourceTree = "<group>"; };
+		46717E031BDF705C00320A22 /* DVTSourceNodeTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSourceNodeTypes.h; sourceTree = "<group>"; };
+		46717E041BDF705C00320A22 /* DVTSourceScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSourceScanner.h; sourceTree = "<group>"; };
+		46717E051BDF705C00320A22 /* DVTSourceSpecification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSourceSpecification.h; sourceTree = "<group>"; };
+		46717E061BDF705C00320A22 /* DVTSourceTokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSourceTokens.h; sourceTree = "<group>"; };
+		46717E071BDF705C00320A22 /* DVTSpecificApplicationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSpecificApplicationProvider.h; sourceTree = "<group>"; };
+		46717E081BDF705C00320A22 /* DVTStackBacktrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTStackBacktrace.h; sourceTree = "<group>"; };
+		46717E091BDF705C00320A22 /* DVTStackBacktraceFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTStackBacktraceFrame.h; sourceTree = "<group>"; };
+		46717E0A1BDF705C00320A22 /* DVTStateRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTStateRepository.h; sourceTree = "<group>"; };
+		46717E0B1BDF705C00320A22 /* DVTStateToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTStateToken.h; sourceTree = "<group>"; };
+		46717E0C1BDF705C00320A22 /* DVTStringBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTStringBuffer.h; sourceTree = "<group>"; };
+		46717E0D1BDF705C00320A22 /* DVTStringRepresentationPersistable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTStringRepresentationPersistable.h; sourceTree = "<group>"; };
+		46717E0E1BDF705C00320A22 /* DVTSyntaxTypeSpecification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSyntaxTypeSpecification.h; sourceTree = "<group>"; };
+		46717E0F1BDF705C00320A22 /* DVTSynthesizedFileDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSynthesizedFileDataType.h; sourceTree = "<group>"; };
+		46717E101BDF705C00320A22 /* DVTSysmonBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSysmonBridge.h; sourceTree = "<group>"; };
+		46717E111BDF705C00320A22 /* DVTSystemActivityToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSystemActivityToken.h; sourceTree = "<group>"; };
+		46717E121BDF705C00320A22 /* DVTSystemEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSystemEvents.h; sourceTree = "<group>"; };
+		46717E131BDF705C00320A22 /* DVTSystemStatisticsMeasurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSystemStatisticsMeasurement.h; sourceTree = "<group>"; };
+		46717E141BDF705C00320A22 /* DVTTarjanSCCVertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTarjanSCCVertex.h; sourceTree = "<group>"; };
+		46717E151BDF705C00320A22 /* DVTTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTask.h; sourceTree = "<group>"; };
+		46717E161BDF705C00320A22 /* DVTTeamOperationBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTeamOperationBase.h; sourceTree = "<group>"; };
+		46717E171BDF705C00320A22 /* DVTTeamRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTeamRecord.h; sourceTree = "<group>"; };
+		46717E181BDF705C00320A22 /* DVTTestPerformanceMetricOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTestPerformanceMetricOutput.h; sourceTree = "<group>"; };
+		46717E191BDF705C00320A22 /* DVTTextDocumentLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTextDocumentLocation.h; sourceTree = "<group>"; };
+		46717E1A1BDF705C00320A22 /* DVTTextFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTextFinder.h; sourceTree = "<group>"; };
+		46717E1B1BDF705C00320A22 /* DVTTextlikeFindDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTextlikeFindDescriptor.h; sourceTree = "<group>"; };
+		46717E1C1BDF705C00320A22 /* DVTTextPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTextPreferences.h; sourceTree = "<group>"; };
+		46717E1D1BDF705C00320A22 /* DVTTextReplacable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTextReplacable.h; sourceTree = "<group>"; };
+		46717E1E1BDF705C00320A22 /* DVTTimerBlockWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTimerBlockWrapper.h; sourceTree = "<group>"; };
+		46717E1F1BDF705C00320A22 /* DVTToolchain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTToolchain.h; sourceTree = "<group>"; };
+		46717E201BDF705C00320A22 /* DVTToolchainRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTToolchainRegistry.h; sourceTree = "<group>"; };
+		46717E211BDF705C00320A22 /* DVTToolsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTToolsInfo.h; sourceTree = "<group>"; };
+		46717E221BDF705C00320A22 /* DVTToolsVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTToolsVersion.h; sourceTree = "<group>"; };
+		46717E231BDF705C00320A22 /* DVTUnknownPrimitiveFileDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTUnknownPrimitiveFileDataType.h; sourceTree = "<group>"; };
+		46717E241BDF705C00320A22 /* DVTUpdateAppIDOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTUpdateAppIDOperation.h; sourceTree = "<group>"; };
+		46717E251BDF705C00320A22 /* DVTUpdatePortalDatabaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTUpdatePortalDatabaseOperation.h; sourceTree = "<group>"; };
+		46717E261BDF705C00320A22 /* DVTUserDefaultsLeastRecentlyUsedCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTUserDefaultsLeastRecentlyUsedCache.h; sourceTree = "<group>"; };
+		46717E271BDF705C00320A22 /* DVTUserNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTUserNotificationCenter.h; sourceTree = "<group>"; };
+		46717E281BDF705C00320A22 /* DVTVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTVersion.h; sourceTree = "<group>"; };
+		46717E291BDF705C00320A22 /* DVTWeakCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTWeakCallBack.h; sourceTree = "<group>"; };
+		46717E2A1BDF705C00320A22 /* DVTWeakInterposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTWeakInterposer.h; sourceTree = "<group>"; };
+		46717E2B1BDF705C00320A22 /* DVTWeakInterposer_ProxyHelperReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTWeakInterposer_ProxyHelperReference.h; sourceTree = "<group>"; };
+		46717E2C1BDF705C00320A22 /* DVTWeakInterposer_RuntimeWeakReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTWeakInterposer_RuntimeWeakReference.h; sourceTree = "<group>"; };
+		46717E2D1BDF705C00320A22 /* DVTWeakReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTWeakReference.h; sourceTree = "<group>"; };
+		46717E2E1BDF705C00320A22 /* DVTXMLArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTXMLArchiver.h; sourceTree = "<group>"; };
+		46717E2F1BDF705C00320A22 /* DVTXMLUnarchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTXMLUnarchiver.h; sourceTree = "<group>"; };
+		46717E301BDF705C00320A22 /* DVTXMLUnarchiving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTXMLUnarchiving.h; sourceTree = "<group>"; };
+		46717E311BDF705C00320A22 /* DVTXPCServiceInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTXPCServiceInformation.h; sourceTree = "<group>"; };
+		46717E321BDF705C00320A22 /* DVTXPCServiceObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTXPCServiceObserver.h; sourceTree = "<group>"; };
+		46717E331BDF705C00320A22 /* ITunesSoftwareServiceUploadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITunesSoftwareServiceUploadDelegate.h; sourceTree = "<group>"; };
+		46717E341BDF705C00320A22 /* NSArray-DVTDiffHashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-DVTDiffHashing.h"; sourceTree = "<group>"; };
+		46717E351BDF705C00320A22 /* NSArray-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
+		46717E361BDF705C00320A22 /* NSArray-DVTMacroExpansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-DVTMacroExpansion.h"; sourceTree = "<group>"; };
+		46717E371BDF705C00320A22 /* NSArray-DVTMacroExpansionAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-DVTMacroExpansionAdditions.h"; sourceTree = "<group>"; };
+		46717E381BDF705C00320A22 /* NSArray-DVTObservingConvenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-DVTObservingConvenience.h"; sourceTree = "<group>"; };
+		46717E391BDF705C00320A22 /* NSArray-DVTRangeArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-DVTRangeArrayAdditions.h"; sourceTree = "<group>"; };
+		46717E3A1BDF705C00320A22 /* NSArray-DVTShellUtilitiesAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-DVTShellUtilitiesAdditions.h"; sourceTree = "<group>"; };
+		46717E3B1BDF705C00320A22 /* NSBlockOperation-DVTNSOperationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBlockOperation-DVTNSOperationAdditions.h"; sourceTree = "<group>"; };
+		46717E3C1BDF705C00320A22 /* NSBundle-DVTNSBundleAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle-DVTNSBundleAdditions.h"; sourceTree = "<group>"; };
+		46717E3D1BDF705C00320A22 /* NSCharacterSet-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCharacterSet-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
+		46717E3E1BDF705C00320A22 /* NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCoding.h; sourceTree = "<group>"; };
+		46717E3F1BDF705C00320A22 /* NSCopying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCopying.h; sourceTree = "<group>"; };
+		46717E401BDF705C00320A22 /* NSData-DVTDiffHashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-DVTDiffHashing.h"; sourceTree = "<group>"; };
+		46717E411BDF705C00320A22 /* NSData-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
+		46717E421BDF705D00320A22 /* NSData-DVTNSDataStdIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-DVTNSDataStdIO.h"; sourceTree = "<group>"; };
+		46717E431BDF705D00320A22 /* NSData-DVTSecurityAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-DVTSecurityAdditions.h"; sourceTree = "<group>"; };
+		46717E441BDF705D00320A22 /* NSDate-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
+		46717E451BDF705D00320A22 /* NSDictionary-ADCDownloadAuthenticationResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-ADCDownloadAuthenticationResponse.h"; sourceTree = "<group>"; };
+		46717E461BDF705D00320A22 /* NSDictionary-DVTDiffHashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-DVTDiffHashing.h"; sourceTree = "<group>"; };
+		46717E471BDF705D00320A22 /* NSDictionary-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
+		46717E481BDF705D00320A22 /* NSDictionary-DVTMacroExpansionAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-DVTMacroExpansionAdditions.h"; sourceTree = "<group>"; };
+		46717E491BDF705D00320A22 /* NSDistributedNotificationCenter-DVTNSNotificationCenterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDistributedNotificationCenter-DVTNSNotificationCenterAdditions.h"; sourceTree = "<group>"; };
+		46717E4A1BDF705D00320A22 /* NSError-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
+		46717E4B1BDF705D00320A22 /* NSError-DVTSecurityAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError-DVTSecurityAdditions.h"; sourceTree = "<group>"; };
+		46717E4C1BDF705D00320A22 /* NSFastEnumeration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFastEnumeration.h; sourceTree = "<group>"; };
+		46717E4D1BDF705D00320A22 /* NSFileHandle-DVTNSFileHandleAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileHandle-DVTNSFileHandleAdditions.h"; sourceTree = "<group>"; };
+		46717E4E1BDF705D00320A22 /* NSFileHandle-DVTTaskAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileHandle-DVTTaskAdditions.h"; sourceTree = "<group>"; };
+		46717E4F1BDF705D00320A22 /* NSFileManager-DVTNSFileManagerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager-DVTNSFileManagerAdditions.h"; sourceTree = "<group>"; };
+		46717E501BDF705D00320A22 /* NSHTTPURLResponse-DVTHTTPCookies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPURLResponse-DVTHTTPCookies.h"; sourceTree = "<group>"; };
+		46717E511BDF705D00320A22 /* NSInputStream-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInputStream-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
+		46717E521BDF705D00320A22 /* NSKeyedUnarchiverDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSKeyedUnarchiverDelegate.h; sourceTree = "<group>"; };
+		46717E531BDF705D00320A22 /* NSLock-DVTFoundationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLock-DVTFoundationExtensions.h"; sourceTree = "<group>"; };
+		46717E541BDF705D00320A22 /* NSMapTable-DVTNSMapTableAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMapTable-DVTNSMapTableAdditions.h"; sourceTree = "<group>"; };
+		46717E551BDF705D00320A22 /* NSMutableArray-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
+		46717E561BDF705D00320A22 /* NSMutableCopying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableCopying.h; sourceTree = "<group>"; };
+		46717E571BDF705D00320A22 /* NSMutableData-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableData-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
+		46717E581BDF705D00320A22 /* NSMutableData-DVTNSDataStdIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableData-DVTNSDataStdIO.h"; sourceTree = "<group>"; };
+		46717E591BDF705D00320A22 /* NSMutableDictionary-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
+		46717E5A1BDF705D00320A22 /* NSMutableSet-DVTNSMutableSetAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableSet-DVTNSMutableSetAdditions.h"; sourceTree = "<group>"; };
+		46717E5B1BDF705D00320A22 /* NSMutableString-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
+		46717E5C1BDF705D00320A22 /* NSMutableURLRequest-DVTHTTPCookies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest-DVTHTTPCookies.h"; sourceTree = "<group>"; };
+		46717E5D1BDF705D00320A22 /* NSNotificationCenter-DVTNSNotificationCenterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter-DVTNSNotificationCenterAdditions.h"; sourceTree = "<group>"; };
+		46717E5E1BDF705D00320A22 /* NSNumber-DVTDiffHashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber-DVTDiffHashing.h"; sourceTree = "<group>"; };
+		46717E5F1BDF705D00320A22 /* NSObject-Deprecated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-Deprecated.h"; sourceTree = "<group>"; };
+		46717E601BDF705D00320A22 /* NSObject-DVTArcSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTArcSupport.h"; sourceTree = "<group>"; };
+		46717E611BDF705D00320A22 /* NSObject-DVTAssertionSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTAssertionSupport.h"; sourceTree = "<group>"; };
+		46717E621BDF705D00320A22 /* NSObject-DVTExtraXMArchiveDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTExtraXMArchiveDataAdditions.h"; sourceTree = "<group>"; };
+		46717E631BDF705D00320A22 /* NSObject-DVTInvalidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTInvalidation.h"; sourceTree = "<group>"; };
+		46717E641BDF705D00320A22 /* NSObject-DVTInvalidation2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTInvalidation2.h"; sourceTree = "<group>"; };
+		46717E651BDF705D00320A22 /* NSObject-DVTInvalidation2Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTInvalidation2Private.h"; sourceTree = "<group>"; };
+		46717E661BDF705D00320A22 /* NSObject-DVTKVCMutableCollectionPropertySupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTKVCMutableCollectionPropertySupport.h"; sourceTree = "<group>"; };
+		46717E671BDF705D00320A22 /* NSObject-DVTKVOAssertionValidationMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTKVOAssertionValidationMethods.h"; sourceTree = "<group>"; };
+		46717E681BDF705D00320A22 /* NSObject-DVTNSRunLoopAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTNSRunLoopAdditions.h"; sourceTree = "<group>"; };
+		46717E691BDF705D00320A22 /* NSObject-DVTObjectDeallocationMonitorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTObjectDeallocationMonitorAdditions.h"; sourceTree = "<group>"; };
+		46717E6A1BDF705D00320A22 /* NSObject-DVTObservingConvenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTObservingConvenience.h"; sourceTree = "<group>"; };
+		46717E6B1BDF705D00320A22 /* NSObject-DVTPropertyLinking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTPropertyLinking.h"; sourceTree = "<group>"; };
+		46717E6C1BDF705D00320A22 /* NSObject-DVTSelectorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTSelectorAdditions.h"; sourceTree = "<group>"; };
+		46717E6D1BDF705D00320A22 /* NSObject-DVTSharedObserverAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTSharedObserverAccess.h"; sourceTree = "<group>"; };
+		46717E6E1BDF705D00320A22 /* NSObject-DVTSimpleSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTSimpleSerialization.h"; sourceTree = "<group>"; };
+		46717E6F1BDF705D00320A22 /* NSObject-DVTXMLArchiving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTXMLArchiving.h"; sourceTree = "<group>"; };
+		46717E701BDF705D00320A22 /* NSObject-DVTXMLUnarchivingPartial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-DVTXMLUnarchivingPartial.h"; sourceTree = "<group>"; };
+		46717E711BDF705D00320A22 /* NSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObject.h; sourceTree = "<group>"; };
+		46717E721BDF705D00320A22 /* NSOutputStream-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOutputStream-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
+		46717E731BDF705D00320A22 /* NSProcessInfo-DVTNSProcessInfoAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSProcessInfo-DVTNSProcessInfoAdditions.h"; sourceTree = "<group>"; };
+		46717E741BDF705D00320A22 /* NSProcessInfo-DVTNSProcessInfoCachedEnvironmentAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSProcessInfo-DVTNSProcessInfoCachedEnvironmentAdditions.h"; sourceTree = "<group>"; };
+		46717E751BDF705D00320A22 /* NSPropertyListSerialization-DVTNSPropertyListSerializationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPropertyListSerialization-DVTNSPropertyListSerializationAdditions.h"; sourceTree = "<group>"; };
+		46717E761BDF705D00320A22 /* NSRecursiveLock-DVTFoundationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRecursiveLock-DVTFoundationExtensions.h"; sourceTree = "<group>"; };
+		46717E771BDF705D00320A22 /* NSRunLoop-DVTNSRunLoopAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRunLoop-DVTNSRunLoopAdditions.h"; sourceTree = "<group>"; };
+		46717E781BDF705D00320A22 /* NSSecureCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSecureCoding.h; sourceTree = "<group>"; };
+		46717E791BDF705D00320A22 /* NSSet-DVTNSSetAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet-DVTNSSetAdditions.h"; sourceTree = "<group>"; };
+		46717E7A1BDF705D00320A22 /* NSString-DVTDiffHashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-DVTDiffHashing.h"; sourceTree = "<group>"; };
+		46717E7B1BDF705D00320A22 /* NSString-DVTFileSystemRepresentationProviding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-DVTFileSystemRepresentationProviding.h"; sourceTree = "<group>"; };
+		46717E7C1BDF705D00320A22 /* NSString-DVTFoundationANSIText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-DVTFoundationANSIText.h"; sourceTree = "<group>"; };
+		46717E7D1BDF705D00320A22 /* NSString-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
+		46717E7E1BDF705D00320A22 /* NSString-DVTMacroDefinitionAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-DVTMacroDefinitionAdditions.h"; sourceTree = "<group>"; };
+		46717E7F1BDF705D00320A22 /* NSString-DVTMacroExpansion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-DVTMacroExpansion.h"; sourceTree = "<group>"; };
+		46717E801BDF705D00320A22 /* NSString-DVTMacroExpansionAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-DVTMacroExpansionAdditions.h"; sourceTree = "<group>"; };
+		46717E811BDF705D00320A22 /* NSString-DVTMacroNameStringCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-DVTMacroNameStringCompatibility.h"; sourceTree = "<group>"; };
+		46717E821BDF705D00320A22 /* NSThread-DVTObjectAllocationTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSThread-DVTObjectAllocationTracking.h"; sourceTree = "<group>"; };
+		46717E831BDF705D00320A22 /* NSTimer-DVTNSTimerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer-DVTNSTimerAdditions.h"; sourceTree = "<group>"; };
+		46717E841BDF705D00320A22 /* NSURL-DVTNSURLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL-DVTNSURLAdditions.h"; sourceTree = "<group>"; };
+		46717E851BDF705D00320A22 /* NSURL-DVTSecurityAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL-DVTSecurityAdditions.h"; sourceTree = "<group>"; };
+		46717E861BDF705D00320A22 /* NSURLConnectionDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLConnectionDataDelegate.h; sourceTree = "<group>"; };
+		46717E871BDF705D00320A22 /* NSURLConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLConnectionDelegate.h; sourceTree = "<group>"; };
+		46717E881BDF705D00320A22 /* NSURLProtectionSpace-DVTSecurityAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtectionSpace-DVTSecurityAdditions.h"; sourceTree = "<group>"; };
+		46717E891BDF705D00320A22 /* NSUserDefaults-DVTNSUserDefaultsAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults-DVTNSUserDefaultsAdditions.h"; sourceTree = "<group>"; };
+		46717E8A1BDF705D00320A22 /* NSUserNotificationCenterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUserNotificationCenterDelegate.h; sourceTree = "<group>"; };
+		46717E8B1BDF705D00320A22 /* NSValue-DVTGeometryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue-DVTGeometryAdditions.h"; sourceTree = "<group>"; };
+		46717E8C1BDF705D00320A22 /* NSXMLElement-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXMLElement-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +682,658 @@
 		46717BE31BDF384200320A22 /* AnalyticsClientTool */ = {
 			isa = PBXGroup;
 			children = (
+				46717C191BDF705B00320A22 /* DVTAnalytics */,
+				46717C401BDF705B00320A22 /* DVTAnalyticsClient */,
+				46717C661BDF705B00320A22 /* DVTFoundation */,
 				46717BE41BDF384200320A22 /* main.m */,
-				46717BEB1BDF39B900320A22 /* DVTAnalyticsClientTool.h */,
 			);
 			path = AnalyticsClientTool;
+			sourceTree = "<group>";
+		};
+		46717C191BDF705B00320A22 /* DVTAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				46717C1A1BDF705B00320A22 /* _DVTCrashPointAppStoreListResult.h */,
+				46717C1B1BDF705B00320A22 /* DVTAnalyticsSnapshot.h */,
+				46717C1C1BDF705B00320A22 /* DVTAnalyticsSnapshotFileSystemSerialization.h */,
+				46717C1D1BDF705B00320A22 /* DVTCrashLog.h */,
+				46717C1E1BDF705B00320A22 /* DVTCrashLogBacktrace.h */,
+				46717C1F1BDF705B00320A22 /* DVTCrashLogBinaryImage.h */,
+				46717C201BDF705B00320A22 /* DVTCrashLogBinaryImageParser.h */,
+				46717C211BDF705B00320A22 /* DVTCrashLogParsedBinaryImage.h */,
+				46717C221BDF705B00320A22 /* DVTCrashLogParsedStackFrame.h */,
+				46717C231BDF705B00320A22 /* DVTCrashLogProvider.h */,
+				46717C241BDF705B00320A22 /* DVTCrashLogRecord.h */,
+				46717C251BDF705B00320A22 /* DVTCrashLogSection.h */,
+				46717C261BDF705B00320A22 /* DVTCrashLogStackFrame.h */,
+				46717C271BDF705B00320A22 /* DVTCrashLogStackFrameParser.h */,
+				46717C281BDF705B00320A22 /* DVTCrashLogThread.h */,
+				46717C291BDF705B00320A22 /* DVTCrashPoint.h */,
+				46717C2A1BDF705B00320A22 /* DVTCrashPointAppStoreSource.h */,
+				46717C2B1BDF705B00320A22 /* DVTCrashPointDistributionInfo.h */,
+				46717C2C1BDF705B00320A22 /* DVTCrashPointFilter.h */,
+				46717C2D1BDF705B00320A22 /* DVTCrashPointLocalSource.h */,
+				46717C2E1BDF705B00320A22 /* DVTCrashPointParameterizedAppStoreSource.h */,
+				46717C2F1BDF705B00320A22 /* DVTCrashPointParameters.h */,
+				46717C301BDF705B00320A22 /* DVTCrashPointRecord.h */,
+				46717C311BDF705B00320A22 /* DVTCrashPointRecordObserved.h */,
+				46717C321BDF705B00320A22 /* DVTCrashPointSource.h */,
+				46717C331BDF705B00320A22 /* DVTCrashPointUserData.h */,
+				46717C341BDF705B00320A22 /* DVTDeviceSymbolicatedStackFrameParser.h */,
+				46717C351BDF705B00320A22 /* DVTInvalidation.h */,
+				46717C361BDF705B00320A22 /* DVTiOSBinaryImageParser.h */,
+				46717C371BDF705B00320A22 /* DVTMultiLineCrashLogSection.h */,
+				46717C381BDF705B00320A22 /* DVTOSXBinaryImageParser.h */,
+				46717C391BDF705B00320A22 /* DVTServerSymbolicatedStackFrameParser.h */,
+				46717C3A1BDF705B00320A22 /* DVTServicesFilenameSerialization.h */,
+				46717C3B1BDF705B00320A22 /* DVTServicesFileSystemSerialization.h */,
+				46717C3C1BDF705B00320A22 /* DVTServicesJSONSerialization.h */,
+				46717C3D1BDF705B00320A22 /* DVTUnsymbolicatedStackFrameParser.h */,
+				46717C3E1BDF705B00320A22 /* NSCopying.h */,
+				46717C3F1BDF705B00320A22 /* NSObject.h */,
+			);
+			path = DVTAnalytics;
+			sourceTree = "<group>";
+		};
+		46717C401BDF705B00320A22 /* DVTAnalyticsClient */ = {
+			isa = PBXGroup;
+			children = (
+				46717C411BDF705B00320A22 /* DVTAnalyticsAppIdentifier.h */,
+				46717C421BDF705B00320A22 /* DVTAnalyticsClientTool.h */,
+				46717C431BDF705B00320A22 /* DVTAnalyticsCrashPointData.h */,
+				46717C441BDF705B00320A22 /* DVTAnalyticsCrashPointDateDistributionOption.h */,
+				46717C451BDF705B00320A22 /* DVTAnalyticsCrashPointDeviceFamilyData.h */,
+				46717C461BDF705B00320A22 /* DVTAnalyticsCrashPointDeviceFamilyDistribution.h */,
+				46717C471BDF705B00320A22 /* DVTAnalyticsCrashPointDeviceFamilyDistributionOption.h */,
+				46717C481BDF705B00320A22 /* DVTAnalyticsCrashPointDeviceFilter.h */,
+				46717C491BDF705B00320A22 /* DVTAnalyticsCrashPointDistributionOptions.h */,
+				46717C4A1BDF705B00320A22 /* DVTAnalyticsCrashPointDownloadData.h */,
+				46717C4B1BDF705B00320A22 /* DVTAnalyticsCrashPointIdentifier.h */,
+				46717C4C1BDF705B00320A22 /* DVTAnalyticsCrashPointList.h */,
+				46717C4D1BDF705B00320A22 /* DVTAnalyticsCrashPointLogData.h */,
+				46717C4E1BDF705B00320A22 /* DVTAnalyticsCrashPointLogList.h */,
+				46717C4F1BDF705B00320A22 /* DVTAnalyticsCrashPointMoreLogsData.h */,
+				46717C501BDF705B00320A22 /* DVTAnalyticsCrashPointOSDistributionOption.h */,
+				46717C511BDF705B00320A22 /* DVTAnalyticsCrashPointOSFilter.h */,
+				46717C521BDF705B00320A22 /* DVTAnalyticsCrashPointOSVersionData.h */,
+				46717C531BDF705B00320A22 /* DVTAnalyticsCrashPointOSVersionDistribution.h */,
+				46717C541BDF705B00320A22 /* DVTAnalyticsCrashPointSortingOption.h */,
+				46717C551BDF705B00320A22 /* DVTAnalyticsCrashPointSummary.h */,
+				46717C561BDF705B00320A22 /* DVTAnalyticsCrashPointTimeData.h */,
+				46717C571BDF705B00320A22 /* DVTAnalyticsCrashPointTimeDistribution.h */,
+				46717C581BDF705B00320A22 /* DVTAnalyticsDownloadCrashPointService.h */,
+				46717C591BDF705B00320A22 /* DVTAnalyticsDownloadMoreLogsOptions.h */,
+				46717C5A1BDF705B00320A22 /* DVTAnalyticsDownloadMoreLogsService.h */,
+				46717C5B1BDF705B00320A22 /* DVTAnalyticsLastCrashPointTimeOption.h */,
+				46717C5C1BDF705B00320A22 /* DVTAnalyticsLastCrashReportKeyOption.h */,
+				46717C5D1BDF705B00320A22 /* DVTAnalyticsListTopCrashPointsService.h */,
+				46717C5E1BDF705B00320A22 /* DVTAnalyticsRequest.h */,
+				46717C5F1BDF705B00320A22 /* DVTAnalyticsResponse.h */,
+				46717C601BDF705B00320A22 /* DVTAnalyticsService.h */,
+				46717C611BDF705B00320A22 /* DVTAnalyticsServiceOption.h */,
+				46717C621BDF705B00320A22 /* DVTAnalyticsServiceURLComponentProviding.h */,
+				46717C631BDF705B00320A22 /* DVTServicesJSONSerialization.h */,
+				46717C641BDF705B00320A22 /* NSObject.h */,
+				46717C651BDF705B00320A22 /* NSURLSessionDelegate.h */,
+			);
+			path = DVTAnalyticsClient;
+			sourceTree = "<group>";
+		};
+		46717C661BDF705B00320A22 /* DVTFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				46717C671BDF705B00320A22 /* _DVTAsynchronousRequest.h */,
+				46717C681BDF705B00320A22 /* _DVTCancellationBlockToken.h */,
+				46717C691BDF705B00320A22 /* _DVTDeallocationMonitorInfo.h */,
+				46717C6A1BDF705B00320A22 /* _DVTDeviceLocatorTracker.h */,
+				46717C6B1BDF705B00320A22 /* _DVTDiffHashingDictionaryDiffHashContext.h */,
+				46717C6C1BDF705B00320A22 /* _DVTDiffLineDataSourceConsistentCopy.h */,
+				46717C6D1BDF705B00320A22 /* _DVTDisallowFinishToken.h */,
+				46717C6E1BDF705B00320A22 /* _DVTErrorRecoveryHandler.h */,
+				46717C6F1BDF705B00320A22 /* _DVTFilePathAssoc.h */,
+				46717C701BDF705B00320A22 /* _DVTFoundationPrivateClassForFindingBundle.h */,
+				46717C711BDF705B00320A22 /* _DVTLogObjectsRequest.h */,
+				46717C721BDF705B00320A22 /* _DVTNotificationReceiver.h */,
+				46717C731BDF705B00320A22 /* _DVTWeakInterposerHelper.h */,
+				46717C741BDF705B00320A22 /* _DVTXMLParsingState.h */,
+				46717C751BDF705B00320A22 /* DataGatheringNSURLConnectionDelegate.h */,
+				46717C761BDF705B00320A22 /* DataWritingNSURLConnectionDelegate.h */,
+				46717C771BDF705B00320A22 /* DTDKAddAppIDService.h */,
+				46717C781BDF705B00320A22 /* DTDKAddApplicationGroupsToAppIDService.h */,
+				46717C791BDF705B00320A22 /* DTDKAddApplicationGroupToTeamService.h */,
+				46717C7A1BDF705B00320A22 /* DTDKAddCloudContainersToAppIDService.h */,
+				46717C7B1BDF705B00320A22 /* DTDKAddCloudContainerToTeamService.h */,
+				46717C7C1BDF705B00320A22 /* DTDKAddDeviceService.h */,
+				46717C7D1BDF705B00320A22 /* DTDKAddOMCIdentifiersToAppIDService.h */,
+				46717C7E1BDF705B00320A22 /* DTDKAddOMCIdentifierToTeamService.h */,
+				46717C7F1BDF705B00320A22 /* DTDKAddShoeboxIDService.h */,
+				46717C801BDF705B00320A22 /* DTDKCertificateAuthorityService.h */,
+				46717C811BDF705B00320A22 /* DTDKCertificateService.h */,
+				46717C821BDF705B00320A22 /* DTDKCreateProvisioningProfileService.h */,
+				46717C831BDF705B00320A22 /* DTDKDeleteAppIDService.h */,
+				46717C841BDF705B00320A22 /* DTDKDeleteProvisioningProfileService.h */,
+				46717C851BDF705B00320A22 /* DTDKDeleteShoeboxIDService.h */,
+				46717C861BDF705B00320A22 /* DTDKDeveloperInfoService.h */,
+				46717C871BDF705B00320A22 /* DTDKDeveloperPortalService.h */,
+				46717C881BDF705B00320A22 /* DTDKDownloadCertService.h */,
+				46717C891BDF705B00320A22 /* DTDKDownloadProvisioningProfileService.h */,
+				46717C8A1BDF705B00320A22 /* DTDKFetchAppIDService.h */,
+				46717C8B1BDF705B00320A22 /* DTDKListAppIDsService.h */,
+				46717C8C1BDF705B00320A22 /* DTDKListApplicationGroupsForTeamService.h */,
+				46717C8D1BDF705B00320A22 /* DTDKListCertService.h */,
+				46717C8E1BDF705B00320A22 /* DTDKListCloudContainersForAppIDService.h */,
+				46717C8F1BDF705B00320A22 /* DTDKListCloudContainersForTeamService.h */,
+				46717C901BDF705B00320A22 /* DTDKListCSRsService.h */,
+				46717C911BDF705B00320A22 /* DTDKListDeviceService.h */,
+				46717C921BDF705B00320A22 /* DTDKListEverythingService.h */,
+				46717C931BDF705B00320A22 /* DTDKListOMCIdentifiersForTeamService.h */,
+				46717C941BDF705B00320A22 /* DTDKListProvisioningProfileService.h */,
+				46717C951BDF705B00320A22 /* DTDKListShoeboxIDsService.h */,
+				46717C961BDF705B00320A22 /* DTDKListTeamService.h */,
+				46717C971BDF705B00320A22 /* DTDKRemoveDeviceService.h */,
+				46717C981BDF705B00320A22 /* DTDKRenameDeviceService.h */,
+				46717C991BDF705B00320A22 /* DTDKRevokeCertService.h */,
+				46717C9A1BDF705B00320A22 /* DTDKServerCancelJoinTeamService.h */,
+				46717C9B1BDF705B00320A22 /* DTDKServerDownloadTeamClientCertificateService.h */,
+				46717C9C1BDF705B00320A22 /* DTDKServerDownloadTeamDevelopmentCertificateService.h */,
+				46717C9D1BDF705B00320A22 /* DTDKServerJoinTeamService.h */,
+				46717C9E1BDF705B00320A22 /* DTDKServerRenewTeamMembershipTeamService.h */,
+				46717C9F1BDF705B00320A22 /* DTDKServerRequestTeamDevelopmentCertificateService.h */,
+				46717CA01BDF705B00320A22 /* DTDKServerRevokeTeamMembershipTeamService.h */,
+				46717CA11BDF705B00320A22 /* DTDKSubmitCSRService.h */,
+				46717CA21BDF705B00320A22 /* DTDKTeamBasedService.h */,
+				46717CA31BDF705B00320A22 /* DTDKUpdateAppIDService.h */,
+				46717CA41BDF705B00320A22 /* DTXAllowedRPC.h */,
+				46717CA51BDF705B00320A22 /* DVTAbstractMacDevice.h */,
+				46717CA61BDF705B00320A22 /* DVTActivationRule.h */,
+				46717CA71BDF705B00320A22 /* DVTAddAppIDOperation.h */,
+				46717CA81BDF705B00320A22 /* DVTAddApplicationGroupsToAppIDOperation.h */,
+				46717CA91BDF705B00320A22 /* DVTAddApplicationGroupToTeamOperation.h */,
+				46717CAA1BDF705B00320A22 /* DVTAddCloudContainersToAppIDOperation.h */,
+				46717CAB1BDF705B00320A22 /* DVTAddCloudContainerToTeamOperation.h */,
+				46717CAC1BDF705B00320A22 /* DVTAddDeviceOperation.h */,
+				46717CAD1BDF705B00320A22 /* DVTAddOMCIdentifiersToAppIDOperation.h */,
+				46717CAE1BDF705B00320A22 /* DVTAddOMCIdentifierToTeamOperation.h */,
+				46717CAF1BDF705B00320A22 /* DVTAppExtensionInstallPromiseManager.h */,
+				46717CB01BDF705B00320A22 /* DVTAppIDFeatures.h */,
+				46717CB11BDF705B00320A22 /* DVTAppIDRecord.h */,
+				46717CB21BDF705B00320A22 /* DVTAppleIDBasedDeveloperAccount.h */,
+				46717CB31BDF705B00320A22 /* DVTApplicationGroupRecord.h */,
+				46717CB41BDF705B00320A22 /* DVTArchitecture.h */,
+				46717CB51BDF705B00320A22 /* DVTArrayObservingBlockToken.h */,
+				46717CB61BDF705B00320A22 /* DVTAssertingWeakInterposer_ProxyHelperReference.h */,
+				46717CB71BDF705B00320A22 /* DVTAssertingWeakInterposer_RuntimeWeakReference.h */,
+				46717CB81BDF705B00320A22 /* DVTAssertionHandler.h */,
+				46717CB91BDF705B00320A22 /* DVTAssertionHandling.h */,
+				46717CBA1BDF705B00320A22 /* DVTAutosynchingProxyArray.h */,
+				46717CBB1BDF705B00320A22 /* DVTBasicDevice.h */,
+				46717CBC1BDF705B00320A22 /* DVTBlockBasedCancellationToken.h */,
+				46717CBD1BDF705B00320A22 /* DVTBlockScanner.h */,
+				46717CBE1BDF705B00320A22 /* DVTBloomFilter.h */,
+				46717CBF1BDF705B00320A22 /* DVTBuildVersion.h */,
+				46717CC01BDF705B00320A22 /* DVTByteBuffer.h */,
+				46717CC11BDF705B00320A22 /* DVTCancellable.h */,
+				46717CC21BDF705B00320A22 /* DVTCancellationBlockCompletion.h */,
+				46717CC31BDF705B00320A22 /* DVTCertBasedDeveloperAccount.h */,
+				46717CC41BDF705B00320A22 /* DVTCertificateRecord.h */,
+				46717CC51BDF705B00320A22 /* DVTCertificateUtilities.h */,
+				46717CC61BDF705B00320A22 /* DVTCharStream.h */,
+				46717CC71BDF705B00320A22 /* DVTCheapReusableSubstring.h */,
+				46717CC81BDF705B00320A22 /* DVTCloudContainerRecord.h */,
+				46717CC91BDF705B00320A22 /* DVTCodesignableDevice.h */,
+				46717CCA1BDF705B00320A22 /* DVTCodesignableDeviceSnapshot.h */,
+				46717CCB1BDF705B00320A22 /* DVTCodesignParameterSnapshot.h */,
+				46717CCC1BDF705B00320A22 /* DVTCodesignResolutionInputs.h */,
+				46717CCD1BDF705B00320A22 /* DVTCodesignResolver.h */,
+				46717CCE1BDF705B00320A22 /* DVTCollectCertificateFailuresOperation.h */,
+				46717CCF1BDF705B00320A22 /* DVTCommandLineOptionDefinition.h */,
+				46717CD01BDF705B00320A22 /* DVTCommandLineParser.h */,
+				46717CD11BDF705B00320A22 /* DVTCommandLineTool.h */,
+				46717CD21BDF705B00320A22 /* DVTComparisonDocumentLocation.h */,
+				46717CD31BDF705B00320A22 /* DVTCompressionInfoProvider.h */,
+				46717CD41BDF705B00320A22 /* DVTConcreteHashTable.h */,
+				46717CD51BDF705B00320A22 /* DVTConcreteMapTable.h */,
+				46717CD61BDF705B00320A22 /* DVTConcreteMapTableValueEnumerator.h */,
+				46717CD71BDF705B00320A22 /* DVTConcretePointerArray.h */,
+				46717CD81BDF705B00320A22 /* DVTConcretePointerFunctions.h */,
+				46717CD91BDF705B00320A22 /* DVTConfinementService.h */,
+				46717CDA1BDF705B00320A22 /* DVTConfinementServiceConnection.h */,
+				46717CDB1BDF705B00320A22 /* DVTConsoleLogger.h */,
+				46717CDC1BDF705B00320A22 /* DVTConsoleOutputFileHandle.h */,
+				46717CDD1BDF705B00320A22 /* DVTCopyOnWriteMutableArray.h */,
+				46717CDE1BDF705C00320A22 /* DVTCPlusPlusSourceModelParser.h */,
+				46717CDF1BDF705C00320A22 /* DVTCreateProfileOperation.h */,
+				46717CE01BDF705C00320A22 /* DVTCSourceModelParser.h */,
+				46717CE11BDF705C00320A22 /* DVTCustomDataOwnership.h */,
+				46717CE21BDF705C00320A22 /* DVTCustomDataSpecifier.h */,
+				46717CE31BDF705C00320A22 /* DVTCustomDataStoring.h */,
+				46717CE41BDF705C00320A22 /* DVTDeclaredPrimitiveFileDataType.h */,
+				46717CE51BDF705C00320A22 /* DVTDelayedInvocation.h */,
+				46717CE61BDF705C00320A22 /* DVTDelayedInvocationNew.h */,
+				46717CE71BDF705C00320A22 /* DVTDeleteProfileOperation.h */,
+				46717CE81BDF705C00320A22 /* DVTDeveloperAccount.h */,
+				46717CE91BDF705C00320A22 /* DVTDeveloperAccountCredentials.h */,
+				46717CEA1BDF705C00320A22 /* DVTDeveloperAccountManager.h */,
+				46717CEB1BDF705C00320A22 /* DVTDeveloperAccountSession.h */,
+				46717CEC1BDF705C00320A22 /* DVTDeveloperInfoOperation.h */,
+				46717CED1BDF705C00320A22 /* DVTDeveloperPaths.h */,
+				46717CEE1BDF705C00320A22 /* DVTDeveloperPortalDatabase.h */,
+				46717CEF1BDF705C00320A22 /* DVTDeveloperPortalResponseWrapper.h */,
+				46717CF01BDF705C00320A22 /* DVTDeveloperPortalServiceConnection.h */,
+				46717CF11BDF705C00320A22 /* DVTDeveloperProfile.h */,
+				46717CF21BDF705C00320A22 /* DVTDeveloperProfileAccountProvider.h */,
+				46717CF31BDF705C00320A22 /* DVTDeveloperRecord.h */,
+				46717CF41BDF705C00320A22 /* DVTDevice.h */,
+				46717CF51BDF705C00320A22 /* DVTDeviceApplication.h */,
+				46717CF61BDF705C00320A22 /* DVTDeviceApplicationBase.h */,
+				46717CF71BDF705C00320A22 /* DVTDeviceApplicationItem.h */,
+				46717CF81BDF705C00320A22 /* DVTDeviceApplicationProvider.h */,
+				46717CF91BDF705C00320A22 /* DVTDeviceCapability.h */,
+				46717CFA1BDF705C00320A22 /* DVTDeviceCapabilityMatchAnythingObject.h */,
+				46717CFB1BDF705C00320A22 /* DVTDeviceLocator.h */,
+				46717CFC1BDF705C00320A22 /* DVTDeviceManager.h */,
+				46717CFD1BDF705C00320A22 /* DVTDeviceRecord.h */,
+				46717CFE1BDF705C00320A22 /* DVTDeviceService.h */,
+				46717CFF1BDF705C00320A22 /* DVTDeviceSupportFiles.h */,
+				46717D001BDF705C00320A22 /* DVTDeviceType.h */,
+				46717D011BDF705C00320A22 /* DVTDiffBinaryDataSource.h */,
+				46717D021BDF705C00320A22 /* DVTDiffCharacterDataSource.h */,
+				46717D031BDF705C00320A22 /* DVTDiffContext.h */,
+				46717D041BDF705C00320A22 /* DVTDiffDataSource.h */,
+				46717D051BDF705C00320A22 /* DVTDiffDescriptor.h */,
+				46717D061BDF705C00320A22 /* DVTDiffHashing.h */,
+				46717D071BDF705C00320A22 /* DVTDiffLineDataSource.h */,
+				46717D081BDF705C00320A22 /* DVTDiffWordDataSource.h */,
+				46717D091BDF705C00320A22 /* DVTDirectoryBasedCustomDataStore.h */,
+				46717D0A1BDF705C00320A22 /* DVTDirectoryServicesSessionDescription.h */,
+				46717D0B1BDF705C00320A22 /* DVTDispatchLock.h */,
+				46717D0C1BDF705C00320A22 /* DVTDispatchLock_ReadWrite.h */,
+				46717D0D1BDF705C00320A22 /* DVTDispatchLock_Recursive.h */,
+				46717D0E1BDF705C00320A22 /* DVTDocumentFragmentFilter.h */,
+				46717D0F1BDF705C00320A22 /* DVTDocumentLocation.h */,
+				46717D101BDF705C00320A22 /* DVTDotSeparatedVersion.h */,
+				46717D111BDF705C00320A22 /* DVTDownloadable.h */,
+				46717D121BDF705C00320A22 /* DVTDownloadable_PKInstallClientDelegate.h */,
+				46717D131BDF705C00320A22 /* DVTDownloadableDependency.h */,
+				46717D141BDF705C00320A22 /* DVTDownloadableIndex.h */,
+				46717D151BDF705C00320A22 /* DVTDownloadableInstallationHelper.h */,
+				46717D161BDF705C00320A22 /* DVTDownloadableManager.h */,
+				46717D171BDF705C00320A22 /* DVTDownloadableManagerIOCache.h */,
+				46717D181BDF705C00320A22 /* DVTDownloadableOperation.h */,
+				46717D191BDF705C00320A22 /* DVTDownloadableOperationDownload.h */,
+				46717D1A1BDF705C00320A22 /* DVTDownloadableProgressToken.h */,
+				46717D1B1BDF705C00320A22 /* DVTDownloadableProvider.h */,
+				46717D1C1BDF705C00320A22 /* DVTDownloadCertificateOperation.h */,
+				46717D1D1BDF705C00320A22 /* DVTDownloadDeveloperIDCertificateAuthorityOperation.h */,
+				46717D1E1BDF705C00320A22 /* DVTDownloadProfileOperation.h */,
+				46717D1F1BDF705C00320A22 /* DVTDownloadTeamProfileOperation.h */,
+				46717D201BDF705C00320A22 /* DVTDownloadWWDRCertificateAuthorityOperation.h */,
+				46717D211BDF705C00320A22 /* DVTDTApplicationWorkspaceClient.h */,
+				46717D221BDF705C00320A22 /* DVTDynamicLogController.h */,
+				46717D231BDF705C00320A22 /* DVTDynamicPrimitiveFileDataType.h */,
+				46717D241BDF705C00320A22 /* DVTEncodableIndex.h */,
+				46717D251BDF705C00320A22 /* DVTEncodableIndexEntry.h */,
+				46717D261BDF705C00320A22 /* DVTExtendedPlatformInfo.h */,
+				46717D271BDF705C00320A22 /* DVTExtension.h */,
+				46717D281BDF705C00320A22 /* DVTExtensionAttributeDescription.h */,
+				46717D291BDF705C00320A22 /* DVTExtensionElementDescription.h */,
+				46717D2A1BDF705C00320A22 /* DVTExtensionParameter.h */,
+				46717D2B1BDF705C00320A22 /* DVTExtensionPoint.h */,
+				46717D2C1BDF705C00320A22 /* DVTExtensionPropertyDescription.h */,
+				46717D2D1BDF705C00320A22 /* DVTExtraXMLArchiveData.h */,
+				46717D2E1BDF705C00320A22 /* DVTExtraXMLAttribute.h */,
+				46717D2F1BDF705C00320A22 /* DVTExtraXMLElement.h */,
+				46717D301BDF705C00320A22 /* DVTFetchOrCreateAppIDOperation.h */,
+				46717D311BDF705C00320A22 /* DVTFileDataType.h */,
+				46717D321BDF705C00320A22 /* DVTFileDataTypeDetection.h */,
+				46717D331BDF705C00320A22 /* DVTFileDataTypeDetectionMagicCache.h */,
+				46717D341BDF705C00320A22 /* DVTFileDataTypeDetector.h */,
+				46717D351BDF705C00320A22 /* DVTFileLogger.h */,
+				46717D361BDF705C00320A22 /* DVTFilePath.h */,
+				46717D371BDF705C00320A22 /* DVTFilePathEventWatcher.h */,
+				46717D381BDF705C00320A22 /* DVTFileSystemRepresentationProviding.h */,
+				46717D391BDF705C00320A22 /* DVTFileSystemVNode.h */,
+				46717D3A1BDF705C00320A22 /* DVTFileWrapper.h */,
+				46717D3B1BDF705C00320A22 /* DVTFindDescriptor.h */,
+				46717D3C1BDF705C00320A22 /* DVTFindRegularExpressionDescriptor.h */,
+				46717D3D1BDF705C00320A22 /* DVTFindRegularExpressionResult.h */,
+				46717D3E1BDF705C00320A22 /* DVTFindResult.h */,
+				46717D3F1BDF705C00320A22 /* DVTFindTextualDescriptor.h */,
+				46717D401BDF705C00320A22 /* DVTFirstLaunchPackage.h */,
+				46717D411BDF705C00320A22 /* DVTFirstLaunchPackageInstallationHelper.h */,
+				46717D421BDF705C00320A22 /* DVTFuture.h */,
+				46717D431BDF705C00320A22 /* DVTGeneratedContentProvider.h */,
+				46717D441BDF705C00320A22 /* DVTGlobalCustomDataStore.h */,
+				46717D451BDF705C00320A22 /* DVTHashTable.h */,
+				46717D461BDF705C00320A22 /* DVTHTMLEntityScanner.h */,
+				46717D471BDF705C00320A22 /* DVTHTMLScanner.h */,
+				46717D481BDF705C00320A22 /* DVTIndexBackedDownloadableProvider.h */,
+				46717D491BDF705C00320A22 /* DVTInvalidation.h */,
+				46717D4A1BDF705C00320A22 /* DVTInvalidationMixIn.h */,
+				46717D4B1BDF705C00320A22 /* DVTInvalidExtension.h */,
+				46717D4C1BDF705C00320A22 /* DVTITunesConnectProxy.h */,
+				46717D4D1BDF705C00320A22 /* DVTITunesConnectProxyDelegate.h */,
+				46717D4E1BDF705C00320A22 /* DVTKeywordScanner.h */,
+				46717D4F1BDF705C00320A22 /* DVTKnownStringMapping.h */,
+				46717D501BDF705C00320A22 /* DVTKVCMethodStyle.h */,
+				46717D511BDF705C00320A22 /* DVTKVOConditionValidator.h */,
+				46717D521BDF705C00320A22 /* DVTLanguageSpecification.h */,
+				46717D531BDF705C00320A22 /* DVTLibraryFragmentFilter.h */,
+				46717D541BDF705C00320A22 /* DVTLicenseAgreementHelper.h */,
+				46717D551BDF705C00320A22 /* DVTListAppIDsOperation.h */,
+				46717D561BDF705C00320A22 /* DVTListApplicationGroupsForTeamOperation.h */,
+				46717D571BDF705C00320A22 /* DVTListCertsOperation.h */,
+				46717D581BDF705C00320A22 /* DVTListCloudContainersForAppIDOperation.h */,
+				46717D591BDF705C00320A22 /* DVTListCloudContainersForTeamOperation.h */,
+				46717D5A1BDF705C00320A22 /* DVTListDevicesOperation.h */,
+				46717D5B1BDF705C00320A22 /* DVTListEverythingOperation.h */,
+				46717D5C1BDF705C00320A22 /* DVTListOMCIdentifiersForTeamOperation.h */,
+				46717D5D1BDF705C00320A22 /* DVTListProvisioningProfilesOperation.h */,
+				46717D5E1BDF705C00320A22 /* DVTListShoeboxIDsOperation.h */,
+				46717D5F1BDF705C00320A22 /* DVTListTeamOperation.h */,
+				46717D601BDF705C00320A22 /* DVTLocalComputer.h */,
+				46717D611BDF705C00320A22 /* DVTLocalComputerLocator.h */,
+				46717D621BDF705C00320A22 /* DVTLocale.h */,
+				46717D631BDF705C00320A22 /* DVTLocalProcessInformation.h */,
+				46717D641BDF705C00320A22 /* DVTLogAspect.h */,
+				46717D651BDF705C00320A22 /* DVTLogger.h */,
+				46717D661BDF705C00320A22 /* DVTMacroAssignmentInfo.h */,
+				46717D671BDF705C00320A22 /* DVTMacroDefinitionCondition.h */,
+				46717D681BDF705C00320A22 /* DVTMacroDefinitionConditionParameter.h */,
+				46717D691BDF705C00320A22 /* DVTMacroDefinitionConditionSet.h */,
+				46717D6A1BDF705C00320A22 /* DVTMacroDefinitionTable.h */,
+				46717D6B1BDF705C00320A22 /* DVTMacroExpansion.h */,
+				46717D6C1BDF705C00320A22 /* DVTMacroExpansionBlock.h */,
+				46717D6D1BDF705C00320A22 /* DVTMacroExpansionIntegerMetric.h */,
+				46717D6E1BDF705C00320A22 /* DVTMacroExpansionOperator.h */,
+				46717D6F1BDF705C00320A22 /* DVTMacroExpansionReplacementOperator.h */,
+				46717D701BDF705C00320A22 /* DVTMacroExpansionReplacementOperator_base.h */,
+				46717D711BDF705C00320A22 /* DVTMacroExpansionReplacementOperator_dir.h */,
+				46717D721BDF705C00320A22 /* DVTMacroExpansionReplacementOperator_file.h */,
+				46717D731BDF705C00320A22 /* DVTMacroExpansionReplacementOperator_suffix.h */,
+				46717D741BDF705C00320A22 /* DVTMacroExpansionReplacementOperatorWithParseError.h */,
+				46717D751BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator.h */,
+				46717D761BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_base.h */,
+				46717D771BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_c99extidentifier.h */,
+				46717D781BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_dir.h */,
+				46717D791BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_file.h */,
+				46717D7A1BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_identifier.h */,
+				46717D7B1BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_lower.h */,
+				46717D7C1BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_quote.h */,
+				46717D7D1BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_rfc1034identifier.h */,
+				46717D7E1BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_standardizepath.h */,
+				46717D7F1BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_suffix.h */,
+				46717D801BDF705C00320A22 /* DVTMacroExpansionRetrievalOperator_upper.h */,
+				46717D811BDF705C00320A22 /* DVTMacroExpansionRetrievalOperatorWithParseError.h */,
+				46717D821BDF705C00320A22 /* DVTMacroExpansionScope.h */,
+				46717D831BDF705C00320A22 /* DVTMacroExpansionStatistics.h */,
+				46717D841BDF705C00320A22 /* DVTMacroExpansionString.h */,
+				46717D851BDF705C00320A22 /* DVTMacroExpansionString_Concatenation.h */,
+				46717D861BDF705C00320A22 /* DVTMacroExpansionString_Literal.h */,
+				46717D871BDF705C00320A22 /* DVTMacroExpansionString_StringSubstitution.h */,
+				46717D881BDF705C00320A22 /* DVTMacroExpansionString_Substitution.h */,
+				46717D891BDF705C00320A22 /* DVTMacroExpansionStringList.h */,
+				46717D8A1BDF705C00320A22 /* DVTMacroExpansionStringList_Literal.h */,
+				46717D8B1BDF705C00320A22 /* DVTMacroExpansionStringList_NonLiteral.h */,
+				46717D8C1BDF705C00320A22 /* DVTMacroNameRegistry.h */,
+				46717D8D1BDF705C00320A22 /* DVTMacroNameRegistryRegistration.h */,
+				46717D8E1BDF705C00320A22 /* DVTMacroNameString.h */,
+				46717D8F1BDF705C00320A22 /* DVTMapTable.h */,
+				46717D901BDF705C00320A22 /* DVTMemorySnapshot.h */,
+				46717D911BDF705C00320A22 /* DVTMessageTrace.h */,
+				46717D921BDF705C00320A22 /* DVTMixIn.h */,
+				46717D931BDF705C00320A22 /* DVTMockDeveloperAccount.h */,
+				46717D941BDF705C00320A22 /* DVTMockProvisioningProfile.h */,
+				46717D951BDF705C00320A22 /* DVTMockProvisioningProfileManager.h */,
+				46717D961BDF705C00320A22 /* DVTMockSigningCertificate.h */,
+				46717D971BDF705C00320A22 /* DVTMockSigningCertificateSource.h */,
+				46717D981BDF705C00320A22 /* DVTModelGraphTransactionScope.h */,
+				46717D991BDF705C00320A22 /* DVTModelObject.h */,
+				46717D9A1BDF705C00320A22 /* DVTModelObjectGraph.h */,
+				46717D9B1BDF705C00320A22 /* DVTModelTree.h */,
+				46717D9C1BDF705C00320A22 /* DVTModelTreeNode.h */,
+				46717D9D1BDF705C00320A22 /* DVTMountedFileSystem.h */,
+				46717D9E1BDF705C00320A22 /* DVTMTReport.h */,
+				46717D9F1BDF705C00320A22 /* DVTMutableKnownStringSet.h */,
+				46717DA01BDF705C00320A22 /* DVTMutableOrderedDictionary.h */,
+				46717DA11BDF705C00320A22 /* DVTMutableOrderedSet.h */,
+				46717DA21BDF705C00320A22 /* DVTMutableRangeArray.h */,
+				46717DA31BDF705C00320A22 /* DVTNotificationToken.h */,
+				46717DA41BDF705C00320A22 /* DVTNumberScanner.h */,
+				46717DA51BDF705C00320A22 /* DVTObjCPlusPlusSourceModelParser.h */,
+				46717DA61BDF705C00320A22 /* DVTObjCSourceModelParser.h */,
+				46717DA71BDF705C00320A22 /* DVTObjectDeallocationMonitor.h */,
+				46717DA81BDF705C00320A22 /* DVTObservableObjectProxy.h */,
+				46717DA91BDF705C00320A22 /* DVTObserveXPCServicesProtocol.h */,
+				46717DAA1BDF705C00320A22 /* DVTObserveXPCServicesProtocol_Callback.h */,
+				46717DAB1BDF705C00320A22 /* DVTObservingBlockToken.h */,
+				46717DAC1BDF705C00320A22 /* DVTObservingToken.h */,
+				46717DAD1BDF705C00320A22 /* DVTObsoleteUnarchivedObjectPlaceholder.h */,
+				46717DAE1BDF705C00320A22 /* DVTOMCRecord.h */,
+				46717DAF1BDF705C00320A22 /* DVTOneShotBlock.h */,
+				46717DB01BDF705C00320A22 /* DVTOperation.h */,
+				46717DB11BDF705C00320A22 /* DVTOperationGroup.h */,
+				46717DB21BDF705C00320A22 /* DVTOSVersion.h */,
+				46717DB31BDF705C00320A22 /* DVTPatienceDiffContext.h */,
+				46717DB41BDF705C00320A22 /* DVTPerformanceCheckpoint.h */,
+				46717DB51BDF705C00320A22 /* DVTPerformanceMetric.h */,
+				46717DB61BDF705C00320A22 /* DVTPerformanceStatistic.h */,
+				46717DB71BDF705C00320A22 /* DVTPerformanceTestLogger_TimeForWork.h */,
+				46717DB81BDF705C00320A22 /* DVTPerformanceTestOutput.h */,
+				46717DB91BDF705C00320A22 /* DVTPerformanceTestParser.h */,
+				46717DBA1BDF705C00320A22 /* DVTPerformanceTestResult.h */,
+				46717DBB1BDF705C00320A22 /* DVTPinger.h */,
+				46717DBC1BDF705C00320A22 /* DVTPipe.h */,
+				46717DBD1BDF705C00320A22 /* DVTPlatform.h */,
+				46717DBE1BDF705C00320A22 /* DVTPlatformFamily.h */,
+				46717DBF1BDF705C00320A22 /* DVTPlugIn.h */,
+				46717DC01BDF705C00320A22 /* DVTPlugInLocalizedString.h */,
+				46717DC11BDF705C00320A22 /* DVTPlugInLocator.h */,
+				46717DC21BDF705C00320A22 /* DVTPlugInManager.h */,
+				46717DC31BDF705C00320A22 /* DVTPlugInScanRecord.h */,
+				46717DC41BDF705C00320A22 /* DVTPointerArray.h */,
+				46717DC51BDF705C00320A22 /* DVTPointerFunctions.h */,
+				46717DC61BDF705C00320A22 /* DVTPortalInfoOperation.h */,
+				46717DC71BDF705C00320A22 /* DVTPortalOperation.h */,
+				46717DC81BDF705C00320A22 /* DVTPortalOperationToken.h */,
+				46717DC91BDF705C00320A22 /* DVTPrimitiveFileDataType.h */,
+				46717DCA1BDF705C00320A22 /* DVTProcessInformation.h */,
+				46717DCB1BDF705C00320A22 /* DVTProgressReporting.h */,
+				46717DCC1BDF705C00320A22 /* DVTPromise.h */,
+				46717DCD1BDF705C00320A22 /* DVTPropertyListEncoding.h */,
+				46717DCE1BDF705C00320A22 /* DVTProvisioningProfile.h */,
+				46717DCF1BDF705C00320A22 /* DVTProvisioningProfileManager.h */,
+				46717DD01BDF705C00320A22 /* DVTProvisioningProfileProvider.h */,
+				46717DD11BDF705C00320A22 /* DVTProvisioningProfileRecord.h */,
+				46717DD21BDF705C00320A22 /* DVTPythonScanner.h */,
+				46717DD31BDF705C00320A22 /* DVTRangeArray.h */,
+				46717DD41BDF705C00320A22 /* DVTReferenceResolutionStrategy.h */,
+				46717DD51BDF705C00320A22 /* DVTReferenceResolver.h */,
+				46717DD61BDF705C00320A22 /* DVTRegexCommandLineOptionDefinition.h */,
+				46717DD71BDF705C00320A22 /* DVTRegExScanner.h */,
+				46717DD81BDF705C00320A22 /* DVTRegistrable.h */,
+				46717DD91BDF705C00320A22 /* DVTRegistry.h */,
+				46717DDA1BDF705C00320A22 /* DVTRegularExpression.h */,
+				46717DDB1BDF705C00320A22 /* DVTRegularExpressionMatch.h */,
+				46717DDC1BDF705C00320A22 /* DVTRelativeDateFormatting.h */,
+				46717DDD1BDF705C00320A22 /* DVTRescindCallbackObservingToken.h */,
+				46717DDE1BDF705C00320A22 /* DVTRevokeCertificateOperation.h */,
+				46717DDF1BDF705C00320A22 /* DVTRoleRecord.h */,
+				46717DE01BDF705C00320A22 /* DVTRuleScanner.h */,
+				46717DE11BDF705C00320A22 /* DVTScannerRule.h */,
+				46717DE21BDF705C00320A22 /* DVTSDK.h */,
+				46717DE31BDF705C00320A22 /* DVTSearchPath.h */,
+				46717DE41BDF705C00320A22 /* DVTSelectorBasedObservingToken.h */,
+				46717DE51BDF705C00320A22 /* DVTSelfInstrumentationSession.h */,
+				46717DE61BDF705C00320A22 /* DVTSemaphore.h */,
+				46717DE71BDF705C00320A22 /* DVTServerCancelJoinTeamOperation.h */,
+				46717DE81BDF705C00320A22 /* DVTServerDownloadTeamClientCertificateOperation.h */,
+				46717DE91BDF705C00320A22 /* DVTServerDownloadTeamDevelopmentCertificateOperation.h */,
+				46717DEA1BDF705C00320A22 /* DVTServerJoinTeamOperation.h */,
+				46717DEB1BDF705C00320A22 /* DVTServerRenewTeamMembershipTeamOperation.h */,
+				46717DEC1BDF705C00320A22 /* DVTServerRequestTeamDevelopmentCertificateOperation.h */,
+				46717DED1BDF705C00320A22 /* DVTServerRevokeTeamMembershipTeamOperation.h */,
+				46717DEE1BDF705C00320A22 /* DVTSharedObserver.h */,
+				46717DEF1BDF705C00320A22 /* DVTShoeboxIDRecord.h */,
+				46717DF01BDF705C00320A22 /* DVTSigningCertificate.h */,
+				46717DF11BDF705C00320A22 /* DVTSigningCertificateManager.h */,
+				46717DF21BDF705C00320A22 /* DVTSigningCertificateSource.h */,
+				46717DF31BDF705C00320A22 /* DVTSigningCertificateSourceDelegate.h */,
+				46717DF41BDF705C00320A22 /* DVTSigningIdentitySnapshot.h */,
+				46717DF51BDF705C00320A22 /* DVTSimpleDeserializer.h */,
+				46717DF61BDF705C00320A22 /* DVTSimplePlainTextDeserializer.h */,
+				46717DF71BDF705C00320A22 /* DVTSimplePlainTextSerializer.h */,
+				46717DF81BDF705C00320A22 /* DVTSimpleSerialization.h */,
+				46717DF91BDF705C00320A22 /* DVTSimpleSerializer.h */,
+				46717DFA1BDF705C00320A22 /* DVTSimpleXMLWriter.h */,
+				46717DFB1BDF705C00320A22 /* DVTSourceCodeLanguage.h */,
+				46717DFC1BDF705C00320A22 /* DVTSourceCodeSymbolKind.h */,
+				46717DFD1BDF705C00320A22 /* DVTSourceModel.h */,
+				46717DFE1BDF705C00320A22 /* DVTSourceModelItem.h */,
+				46717DFF1BDF705C00320A22 /* DVTSourceModelParser.h */,
+				46717E001BDF705C00320A22 /* DVTSourceModelParserInteriorProductionRule.h */,
+				46717E011BDF705C00320A22 /* DVTSourceModelParserProductionRule.h */,
+				46717E021BDF705C00320A22 /* DVTSourceModelParserProductionState.h */,
+				46717E031BDF705C00320A22 /* DVTSourceNodeTypes.h */,
+				46717E041BDF705C00320A22 /* DVTSourceScanner.h */,
+				46717E051BDF705C00320A22 /* DVTSourceSpecification.h */,
+				46717E061BDF705C00320A22 /* DVTSourceTokens.h */,
+				46717E071BDF705C00320A22 /* DVTSpecificApplicationProvider.h */,
+				46717E081BDF705C00320A22 /* DVTStackBacktrace.h */,
+				46717E091BDF705C00320A22 /* DVTStackBacktraceFrame.h */,
+				46717E0A1BDF705C00320A22 /* DVTStateRepository.h */,
+				46717E0B1BDF705C00320A22 /* DVTStateToken.h */,
+				46717E0C1BDF705C00320A22 /* DVTStringBuffer.h */,
+				46717E0D1BDF705C00320A22 /* DVTStringRepresentationPersistable.h */,
+				46717E0E1BDF705C00320A22 /* DVTSyntaxTypeSpecification.h */,
+				46717E0F1BDF705C00320A22 /* DVTSynthesizedFileDataType.h */,
+				46717E101BDF705C00320A22 /* DVTSysmonBridge.h */,
+				46717E111BDF705C00320A22 /* DVTSystemActivityToken.h */,
+				46717E121BDF705C00320A22 /* DVTSystemEvents.h */,
+				46717E131BDF705C00320A22 /* DVTSystemStatisticsMeasurement.h */,
+				46717E141BDF705C00320A22 /* DVTTarjanSCCVertex.h */,
+				46717E151BDF705C00320A22 /* DVTTask.h */,
+				46717E161BDF705C00320A22 /* DVTTeamOperationBase.h */,
+				46717E171BDF705C00320A22 /* DVTTeamRecord.h */,
+				46717E181BDF705C00320A22 /* DVTTestPerformanceMetricOutput.h */,
+				46717E191BDF705C00320A22 /* DVTTextDocumentLocation.h */,
+				46717E1A1BDF705C00320A22 /* DVTTextFinder.h */,
+				46717E1B1BDF705C00320A22 /* DVTTextlikeFindDescriptor.h */,
+				46717E1C1BDF705C00320A22 /* DVTTextPreferences.h */,
+				46717E1D1BDF705C00320A22 /* DVTTextReplacable.h */,
+				46717E1E1BDF705C00320A22 /* DVTTimerBlockWrapper.h */,
+				46717E1F1BDF705C00320A22 /* DVTToolchain.h */,
+				46717E201BDF705C00320A22 /* DVTToolchainRegistry.h */,
+				46717E211BDF705C00320A22 /* DVTToolsInfo.h */,
+				46717E221BDF705C00320A22 /* DVTToolsVersion.h */,
+				46717E231BDF705C00320A22 /* DVTUnknownPrimitiveFileDataType.h */,
+				46717E241BDF705C00320A22 /* DVTUpdateAppIDOperation.h */,
+				46717E251BDF705C00320A22 /* DVTUpdatePortalDatabaseOperation.h */,
+				46717E261BDF705C00320A22 /* DVTUserDefaultsLeastRecentlyUsedCache.h */,
+				46717E271BDF705C00320A22 /* DVTUserNotificationCenter.h */,
+				46717E281BDF705C00320A22 /* DVTVersion.h */,
+				46717E291BDF705C00320A22 /* DVTWeakCallBack.h */,
+				46717E2A1BDF705C00320A22 /* DVTWeakInterposer.h */,
+				46717E2B1BDF705C00320A22 /* DVTWeakInterposer_ProxyHelperReference.h */,
+				46717E2C1BDF705C00320A22 /* DVTWeakInterposer_RuntimeWeakReference.h */,
+				46717E2D1BDF705C00320A22 /* DVTWeakReference.h */,
+				46717E2E1BDF705C00320A22 /* DVTXMLArchiver.h */,
+				46717E2F1BDF705C00320A22 /* DVTXMLUnarchiver.h */,
+				46717E301BDF705C00320A22 /* DVTXMLUnarchiving.h */,
+				46717E311BDF705C00320A22 /* DVTXPCServiceInformation.h */,
+				46717E321BDF705C00320A22 /* DVTXPCServiceObserver.h */,
+				46717E331BDF705C00320A22 /* ITunesSoftwareServiceUploadDelegate.h */,
+				46717E341BDF705C00320A22 /* NSArray-DVTDiffHashing.h */,
+				46717E351BDF705C00320A22 /* NSArray-DVTFoundationClassAdditions.h */,
+				46717E361BDF705C00320A22 /* NSArray-DVTMacroExpansion.h */,
+				46717E371BDF705C00320A22 /* NSArray-DVTMacroExpansionAdditions.h */,
+				46717E381BDF705C00320A22 /* NSArray-DVTObservingConvenience.h */,
+				46717E391BDF705C00320A22 /* NSArray-DVTRangeArrayAdditions.h */,
+				46717E3A1BDF705C00320A22 /* NSArray-DVTShellUtilitiesAdditions.h */,
+				46717E3B1BDF705C00320A22 /* NSBlockOperation-DVTNSOperationAdditions.h */,
+				46717E3C1BDF705C00320A22 /* NSBundle-DVTNSBundleAdditions.h */,
+				46717E3D1BDF705C00320A22 /* NSCharacterSet-DVTFoundationClassAdditions.h */,
+				46717E3E1BDF705C00320A22 /* NSCoding.h */,
+				46717E3F1BDF705C00320A22 /* NSCopying.h */,
+				46717E401BDF705C00320A22 /* NSData-DVTDiffHashing.h */,
+				46717E411BDF705C00320A22 /* NSData-DVTFoundationClassAdditions.h */,
+				46717E421BDF705D00320A22 /* NSData-DVTNSDataStdIO.h */,
+				46717E431BDF705D00320A22 /* NSData-DVTSecurityAdditions.h */,
+				46717E441BDF705D00320A22 /* NSDate-DVTFoundationClassAdditions.h */,
+				46717E451BDF705D00320A22 /* NSDictionary-ADCDownloadAuthenticationResponse.h */,
+				46717E461BDF705D00320A22 /* NSDictionary-DVTDiffHashing.h */,
+				46717E471BDF705D00320A22 /* NSDictionary-DVTFoundationClassAdditions.h */,
+				46717E481BDF705D00320A22 /* NSDictionary-DVTMacroExpansionAdditions.h */,
+				46717E491BDF705D00320A22 /* NSDistributedNotificationCenter-DVTNSNotificationCenterAdditions.h */,
+				46717E4A1BDF705D00320A22 /* NSError-DVTFoundationClassAdditions.h */,
+				46717E4B1BDF705D00320A22 /* NSError-DVTSecurityAdditions.h */,
+				46717E4C1BDF705D00320A22 /* NSFastEnumeration.h */,
+				46717E4D1BDF705D00320A22 /* NSFileHandle-DVTNSFileHandleAdditions.h */,
+				46717E4E1BDF705D00320A22 /* NSFileHandle-DVTTaskAdditions.h */,
+				46717E4F1BDF705D00320A22 /* NSFileManager-DVTNSFileManagerAdditions.h */,
+				46717E501BDF705D00320A22 /* NSHTTPURLResponse-DVTHTTPCookies.h */,
+				46717E511BDF705D00320A22 /* NSInputStream-DVTFoundationClassAdditions.h */,
+				46717E521BDF705D00320A22 /* NSKeyedUnarchiverDelegate.h */,
+				46717E531BDF705D00320A22 /* NSLock-DVTFoundationExtensions.h */,
+				46717E541BDF705D00320A22 /* NSMapTable-DVTNSMapTableAdditions.h */,
+				46717E551BDF705D00320A22 /* NSMutableArray-DVTFoundationClassAdditions.h */,
+				46717E561BDF705D00320A22 /* NSMutableCopying.h */,
+				46717E571BDF705D00320A22 /* NSMutableData-DVTFoundationClassAdditions.h */,
+				46717E581BDF705D00320A22 /* NSMutableData-DVTNSDataStdIO.h */,
+				46717E591BDF705D00320A22 /* NSMutableDictionary-DVTFoundationClassAdditions.h */,
+				46717E5A1BDF705D00320A22 /* NSMutableSet-DVTNSMutableSetAdditions.h */,
+				46717E5B1BDF705D00320A22 /* NSMutableString-DVTFoundationClassAdditions.h */,
+				46717E5C1BDF705D00320A22 /* NSMutableURLRequest-DVTHTTPCookies.h */,
+				46717E5D1BDF705D00320A22 /* NSNotificationCenter-DVTNSNotificationCenterAdditions.h */,
+				46717E5E1BDF705D00320A22 /* NSNumber-DVTDiffHashing.h */,
+				46717E5F1BDF705D00320A22 /* NSObject-Deprecated.h */,
+				46717E601BDF705D00320A22 /* NSObject-DVTArcSupport.h */,
+				46717E611BDF705D00320A22 /* NSObject-DVTAssertionSupport.h */,
+				46717E621BDF705D00320A22 /* NSObject-DVTExtraXMArchiveDataAdditions.h */,
+				46717E631BDF705D00320A22 /* NSObject-DVTInvalidation.h */,
+				46717E641BDF705D00320A22 /* NSObject-DVTInvalidation2.h */,
+				46717E651BDF705D00320A22 /* NSObject-DVTInvalidation2Private.h */,
+				46717E661BDF705D00320A22 /* NSObject-DVTKVCMutableCollectionPropertySupport.h */,
+				46717E671BDF705D00320A22 /* NSObject-DVTKVOAssertionValidationMethods.h */,
+				46717E681BDF705D00320A22 /* NSObject-DVTNSRunLoopAdditions.h */,
+				46717E691BDF705D00320A22 /* NSObject-DVTObjectDeallocationMonitorAdditions.h */,
+				46717E6A1BDF705D00320A22 /* NSObject-DVTObservingConvenience.h */,
+				46717E6B1BDF705D00320A22 /* NSObject-DVTPropertyLinking.h */,
+				46717E6C1BDF705D00320A22 /* NSObject-DVTSelectorAdditions.h */,
+				46717E6D1BDF705D00320A22 /* NSObject-DVTSharedObserverAccess.h */,
+				46717E6E1BDF705D00320A22 /* NSObject-DVTSimpleSerialization.h */,
+				46717E6F1BDF705D00320A22 /* NSObject-DVTXMLArchiving.h */,
+				46717E701BDF705D00320A22 /* NSObject-DVTXMLUnarchivingPartial.h */,
+				46717E711BDF705D00320A22 /* NSObject.h */,
+				46717E721BDF705D00320A22 /* NSOutputStream-DVTFoundationClassAdditions.h */,
+				46717E731BDF705D00320A22 /* NSProcessInfo-DVTNSProcessInfoAdditions.h */,
+				46717E741BDF705D00320A22 /* NSProcessInfo-DVTNSProcessInfoCachedEnvironmentAdditions.h */,
+				46717E751BDF705D00320A22 /* NSPropertyListSerialization-DVTNSPropertyListSerializationAdditions.h */,
+				46717E761BDF705D00320A22 /* NSRecursiveLock-DVTFoundationExtensions.h */,
+				46717E771BDF705D00320A22 /* NSRunLoop-DVTNSRunLoopAdditions.h */,
+				46717E781BDF705D00320A22 /* NSSecureCoding.h */,
+				46717E791BDF705D00320A22 /* NSSet-DVTNSSetAdditions.h */,
+				46717E7A1BDF705D00320A22 /* NSString-DVTDiffHashing.h */,
+				46717E7B1BDF705D00320A22 /* NSString-DVTFileSystemRepresentationProviding.h */,
+				46717E7C1BDF705D00320A22 /* NSString-DVTFoundationANSIText.h */,
+				46717E7D1BDF705D00320A22 /* NSString-DVTFoundationClassAdditions.h */,
+				46717E7E1BDF705D00320A22 /* NSString-DVTMacroDefinitionAdditions.h */,
+				46717E7F1BDF705D00320A22 /* NSString-DVTMacroExpansion.h */,
+				46717E801BDF705D00320A22 /* NSString-DVTMacroExpansionAdditions.h */,
+				46717E811BDF705D00320A22 /* NSString-DVTMacroNameStringCompatibility.h */,
+				46717E821BDF705D00320A22 /* NSThread-DVTObjectAllocationTracking.h */,
+				46717E831BDF705D00320A22 /* NSTimer-DVTNSTimerAdditions.h */,
+				46717E841BDF705D00320A22 /* NSURL-DVTNSURLAdditions.h */,
+				46717E851BDF705D00320A22 /* NSURL-DVTSecurityAdditions.h */,
+				46717E861BDF705D00320A22 /* NSURLConnectionDataDelegate.h */,
+				46717E871BDF705D00320A22 /* NSURLConnectionDelegate.h */,
+				46717E881BDF705D00320A22 /* NSURLProtectionSpace-DVTSecurityAdditions.h */,
+				46717E891BDF705D00320A22 /* NSUserDefaults-DVTNSUserDefaultsAdditions.h */,
+				46717E8A1BDF705D00320A22 /* NSUserNotificationCenterDelegate.h */,
+				46717E8B1BDF705D00320A22 /* NSValue-DVTGeometryAdditions.h */,
+				46717E8C1BDF705D00320A22 /* NSXMLElement-DVTFoundationClassAdditions.h */,
+			);
+			path = DVTFoundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

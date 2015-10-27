@@ -4,10 +4,6 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
-@class DVTAnalyticsAppIdentifier;
-@class DVTAnalyticsCrashPointIdentifier;
-@class DVTDeveloperAccount;
-@class DVTServicesSession;
 
 @interface DVTAnalyticsClientTool : NSObject
 {
@@ -53,7 +49,7 @@
 @property(retain) NSFileHandle *standardInput; // @synthesize standardInput=_standardInput;
 @property(retain) NSArray *arguments; // @synthesize arguments=_arguments;
 @property(retain) NSString *name; // @synthesize name=_name;
-
+- (void).cxx_destruct;
 - (id)_sessionWithError:(id *)arg1;
 @property(readonly) DVTDeveloperAccount *developerAccount; // @synthesize developerAccount=_developerAccount;
 @property(readonly) DVTAnalyticsCrashPointIdentifier *crashPointIdentifier; // @synthesize crashPointIdentifier=_crashPointIdentifier;
@@ -63,6 +59,7 @@
 - (BOOL)_downloadMoreLogsWithError:(id *)arg1;
 - (BOOL)_downloadLogsWithError:(id *)arg1;
 - (BOOL)_listLogsWithError:(id *)arg1;
+- (BOOL)_executeWithError:(id *)arg1 executionBlock:(CDUnknownBlockType)arg2;
 - (id)_stringFromCommand:(long long)arg1;
 - (long long)_commandFromString:(id)arg1 error:(id *)arg2;
 - (BOOL)runWithError:(id *)arg1;
