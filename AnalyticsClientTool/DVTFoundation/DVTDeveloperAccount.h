@@ -4,6 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
+@class DVTDeveloperAccountSession;
+@class DVTDeveloperAccountCredentials;
+@class DVTDispatchLock;
 
 @interface DVTDeveloperAccount : NSObject
 {
@@ -25,7 +28,7 @@
 @property BOOL alwaysLogInUsingQA; // @synthesize alwaysLogInUsingQA=_alwaysLogInUsingQA;
 @property(copy, nonatomic) NSString *userDescription; // @synthesize userDescription=_userDescription;
 @property(copy) DVTDeveloperAccountCredentials *accountCredentials; // @synthesize accountCredentials=_accountCredentials;
-- (void).cxx_destruct;
+//- (void).cxx_destruct;
 @property(readonly) NSDictionary *propertyListRepresentation;
 @property(readonly) NSString *userDescriptionOrBestGuess;
 @property(readonly) BOOL hasPassword;
@@ -37,7 +40,7 @@
 - (void)revokeSession:(id)arg1;
 - (id)sessionIfAvailable;
 @property(readonly) DVTDeveloperAccountSession *session; // @synthesize session=_session;
-- (void)executeWithSession:(CDUnknownBlockType)arg1;
+//- (void)executeWithSession:(CDUnknownBlockType)arg1;
 - (id)sessionByLoggingInIfNeeded:(id *)arg1;
 - (id)_sessionByLoggingIn:(id *)arg1;
 - (id)init;

@@ -650,6 +650,23 @@
 		46717E8A1BDF705D00320A22 /* NSUserNotificationCenterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUserNotificationCenterDelegate.h; sourceTree = "<group>"; };
 		46717E8B1BDF705D00320A22 /* NSValue-DVTGeometryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue-DVTGeometryAdditions.h"; sourceTree = "<group>"; };
 		46717E8C1BDF705D00320A22 /* NSXMLElement-DVTFoundationClassAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXMLElement-DVTFoundationClassAdditions.h"; sourceTree = "<group>"; };
+		46717E8E1BDF741700320A22 /* DVTCancellable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTCancellable.h; sourceTree = "<group>"; };
+		46717E8F1BDF741700320A22 /* DVTDirectoryServicesSessionDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTDirectoryServicesSessionDescription.h; sourceTree = "<group>"; };
+		46717E901BDF741700320A22 /* DVTExtensionParameter-DVTServicesAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DVTExtensionParameter-DVTServicesAdditions.h"; sourceTree = "<group>"; };
+		46717E911BDF741700320A22 /* DVTServicesDeserializationContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTServicesDeserializationContext.h; sourceTree = "<group>"; };
+		46717E921BDF741700320A22 /* DVTServicesJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTServicesJSONSerialization.h; sourceTree = "<group>"; };
+		46717E931BDF741700320A22 /* DVTServicesRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTServicesRequest.h; sourceTree = "<group>"; };
+		46717E941BDF741700320A22 /* DVTServicesSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTServicesSession.h; sourceTree = "<group>"; };
+		46717E951BDF741700320A22 /* DVTServicesType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTServicesType.h; sourceTree = "<group>"; };
+		46717E961BDF741700320A22 /* DVTServicesTypeLoadingContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTServicesTypeLoadingContext.h; sourceTree = "<group>"; };
+		46717E971BDF741700320A22 /* DVTServicesTypeProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTServicesTypeProperty.h; sourceTree = "<group>"; };
+		46717E981BDF741700320A22 /* DVTTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTTimer.h; sourceTree = "<group>"; };
+		46717E991BDF741700320A22 /* NSArray-DVTServicesAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray-DVTServicesAdditions.h"; sourceTree = "<group>"; };
+		46717E9A1BDF741700320A22 /* NSData-DVTServicesJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData-DVTServicesJSONSerialization.h"; sourceTree = "<group>"; };
+		46717E9B1BDF741700320A22 /* NSDate-DVTServicesJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate-DVTServicesJSONSerialization.h"; sourceTree = "<group>"; };
+		46717E9C1BDF741700320A22 /* NSDictionary-DVTServicesAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-DVTServicesAdditions.h"; sourceTree = "<group>"; };
+		46717E9D1BDF741700320A22 /* NSMutableDictionary-DVTServicesAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary-DVTServicesAdditions.h"; sourceTree = "<group>"; };
+		46717E9E1BDF741700320A22 /* NSObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -685,6 +702,7 @@
 				46717C191BDF705B00320A22 /* DVTAnalytics */,
 				46717C401BDF705B00320A22 /* DVTAnalyticsClient */,
 				46717C661BDF705B00320A22 /* DVTFoundation */,
+				46717E8D1BDF741700320A22 /* DVTServices */,
 				46717BE41BDF384200320A22 /* main.m */,
 			);
 			path = AnalyticsClientTool;
@@ -1336,6 +1354,30 @@
 			path = DVTFoundation;
 			sourceTree = "<group>";
 		};
+		46717E8D1BDF741700320A22 /* DVTServices */ = {
+			isa = PBXGroup;
+			children = (
+				46717E8E1BDF741700320A22 /* DVTCancellable.h */,
+				46717E8F1BDF741700320A22 /* DVTDirectoryServicesSessionDescription.h */,
+				46717E901BDF741700320A22 /* DVTExtensionParameter-DVTServicesAdditions.h */,
+				46717E911BDF741700320A22 /* DVTServicesDeserializationContext.h */,
+				46717E921BDF741700320A22 /* DVTServicesJSONSerialization.h */,
+				46717E931BDF741700320A22 /* DVTServicesRequest.h */,
+				46717E941BDF741700320A22 /* DVTServicesSession.h */,
+				46717E951BDF741700320A22 /* DVTServicesType.h */,
+				46717E961BDF741700320A22 /* DVTServicesTypeLoadingContext.h */,
+				46717E971BDF741700320A22 /* DVTServicesTypeProperty.h */,
+				46717E981BDF741700320A22 /* DVTTimer.h */,
+				46717E991BDF741700320A22 /* NSArray-DVTServicesAdditions.h */,
+				46717E9A1BDF741700320A22 /* NSData-DVTServicesJSONSerialization.h */,
+				46717E9B1BDF741700320A22 /* NSDate-DVTServicesJSONSerialization.h */,
+				46717E9C1BDF741700320A22 /* NSDictionary-DVTServicesAdditions.h */,
+				46717E9D1BDF741700320A22 /* NSMutableDictionary-DVTServicesAdditions.h */,
+				46717E9E1BDF741700320A22 /* NSObject.h */,
+			);
+			path = DVTServices;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1491,6 +1533,10 @@
 					DVTAnalytics,
 					"-framework",
 					DVTAnalyticsClient,
+					"-framework",
+					DVTServices,
+					"-framework",
+					DVTFoundation,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1509,6 +1555,10 @@
 					DVTAnalytics,
 					"-framework",
 					DVTAnalyticsClient,
+					"-framework",
+					DVTServices,
+					"-framework",
+					DVTFoundation,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

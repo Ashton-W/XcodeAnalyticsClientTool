@@ -18,7 +18,7 @@
 + (id)accountCredentialsForUsername:(id)arg1 keychain:(struct OpaqueSecKeychainRef *)arg2 error:(id *)arg3;
 + (id)allAccountCredentials;
 @property(readonly, nonatomic) NSURLCredential *URLCredential; // @synthesize URLCredential=_URLCredential;
-- (void).cxx_destruct;
+//- (void).cxx_destruct;
 - (BOOL)saveToKeychain:(struct OpaqueSecKeychainRef *)arg1 error:(id *)arg2;
 - (BOOL)isEqual:(id)arg1;
 - (unsigned long long)hash;

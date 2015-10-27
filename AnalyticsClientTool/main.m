@@ -1,4 +1,9 @@
 #import <Foundation/Foundation.h>
+#import "DVTDeveloperAccountCredentials.h"
+#import "DVTDeveloperAccount.h"
+#import "DVTAppleIDBasedDeveloperAccount.h"
+#import "DVTDirectoryServicesSessionDescription.h"
+#import "DVTServicesSession.h"
 #import "DVTAnalyticsClientTool.h"
 
 void print(NSString *format, ...) {
@@ -12,11 +17,42 @@ void print(NSString *format, ...) {
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        DVTAnalyticsClientTool *tool = [DVTAnalyticsClientTool analyticsClientTool];
         NSError *error;
         
-        // it seems to like the arguments trimmed
-        tool.arguments = [[NSProcessInfo processInfo].arguments subarrayWithRange:NSMakeRange(1, [NSProcessInfo processInfo].arguments.count - 1)];
+        NSMutableArray *arguments = [[NSProcessInfo processInfo].arguments mutableCopy];
+        
+        if (arguments.count < 3) {
+            print(@"First two arguments are username and password for iTunes Connect?");
+            return 1;
+        }
+        
+        NSString *username = arguments[1];
+        NSString *password = arguments[2];
+        
+        DVTDeveloperAccountCredentials *credentials = [DVTDeveloperAccountCredentials accountCredentialsFromUsername:username password:password error:&error];
+        
+        if (error) {
+            print(@"%@", error.localizedDescription);
+            return 1;
+        }
+        
+        DVTAppleIDBasedDeveloperAccount *account = [DVTAppleIDBasedDeveloperAccount accountWithCredentials:credentials];
+        
+        
+        // session
+        DVTServicesSession *session = [DVTServicesSession servicesSessionByLoggingInWithAccount:account executionContext:0x2 error:&error];
+        
+        if (error) {
+            print(@"%@", error.localizedDescription);
+            return 1;
+        }
+        
+        DVTAnalyticsClientTool *tool = [DVTAnalyticsClientTool analyticsClientTool];
+        tool.session = session; // ????
+        
+        // it seems to like the arguments trimmed, even without our extra parameters.
+        [arguments removeObjectsInRange:NSMakeRange(0, 3)];
+        tool.arguments = arguments;
         
         [tool runWithError:&error];
         
